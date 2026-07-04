@@ -29,11 +29,11 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "Tony — Marketing & Design",
-    template: "%s — Tony",
+    default: "Tony Syme — B2B Marketing Manager",
+    template: "%s — Tony Syme",
   },
   description:
-    "Marketing campaigns, brand identities, and websites for companies that would rather be unforgettable than safe.",
+    "Commercially minded B2B marketing manager turning brand, web, and campaigns into measurable growth for trade, distribution, and live-events businesses across Scotland.",
 };
 
 export default function RootLayout({

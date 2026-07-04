@@ -11,28 +11,34 @@ export function Footer() {
             href="/"
             className="font-display text-3xl font-semibold tracking-tight"
           >
-            Tony<span className="text-coral">.</span>
+            Tony<span className="text-accent">.</span>
           </Link>
           <p className="mt-3 max-w-xs font-grotesk text-[0.8rem] uppercase tracking-[0.12em] text-stone">
-            Marketing &amp; design — campaigns, brands &amp; websites.
+            {CONTACT.name} — {CONTACT.role}. {CONTACT.availability}.
           </p>
         </div>
 
         <div className="flex flex-wrap gap-x-8 gap-y-3 font-grotesk text-[0.8rem] uppercase tracking-[0.12em] text-ink-soft">
-          <a href={`mailto:${CONTACT.email}`} className="hover:text-coral">
+          <a href={`mailto:${CONTACT.email}`} className="hover:text-accent">
             Email
+          </a>
+          <a href={`tel:${CONTACT.phoneHref}`} className="hover:text-accent">
+            {CONTACT.phone}
           </a>
           {CONTACT.socials.map((s) => (
             <a
               key={s.label}
               href={s.href}
-              className="hover:text-coral"
+              className="hover:text-accent"
               target="_blank"
               rel="noreferrer"
             >
               {s.label}
             </a>
           ))}
+          <a href={CONTACT.cvUrl} download className="hover:text-accent">
+            CV
+          </a>
           <span className="text-stone">© {CONTACT.year}</span>
         </div>
       </Container>

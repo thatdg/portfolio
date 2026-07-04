@@ -1,14 +1,8 @@
+import Image from "next/image";
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
-
-const capabilities = [
-  "Brand strategy",
-  "Campaign & content",
-  "Identity & art direction",
-  "Web design & build",
-  "Social & community",
-  "Naming & voice",
-];
+import { CONTACT } from "@/content/site";
+import { BIO } from "@/content/cv";
 
 export function About() {
   return (
@@ -18,39 +12,35 @@ export function About() {
           About
         </p>
 
-        <div className="mt-8 grid gap-12 md:grid-cols-[1fr_1fr] md:gap-16">
+        <div className="mt-8 grid gap-12 md:grid-cols-[0.85fr_1.15fr] md:gap-16">
           <Reveal>
-            <h2 className="font-display text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-              Strategy first.
-              <br />
-              Then the <em className="italic text-coral">fun</em> part.
-            </h2>
+            <figure>
+              <div className="relative aspect-[4/5] w-full overflow-hidden">
+                <Image
+                  src="/tony.png"
+                  alt={`${CONTACT.name}, ${CONTACT.role}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  className="object-cover"
+                />
+                <span className="absolute right-5 top-5 h-1 w-10 bg-accent" />
+              </div>
+              <figcaption className="mt-3 font-grotesk text-[0.72rem] uppercase tracking-[0.14em] text-stone">
+                {CONTACT.name} — {CONTACT.location}
+              </figcaption>
+            </figure>
           </Reveal>
 
           <Reveal delay={120} className="max-w-xl">
-            <div className="space-y-5 text-lg leading-relaxed text-ink-soft">
-              <p>
-                For a decade I&rsquo;ve helped brands find the one true thing
-                they can say — then say it louder than their budget should
-                allow. I work across the whole arc: positioning, campaign,
-                identity, and the site it all lands on.
-              </p>
-              <p>
-                Before going independent I led creative for agencies and
-                in-house teams. I still believe the best marketing doesn&rsquo;t
-                feel like marketing — it feels like something you&rsquo;d tell a
-                friend.
-              </p>
-            </div>
-
-            <ul className="mt-8 grid grid-cols-2 gap-x-6 gap-y-3 border-t border-sand pt-6 font-grotesk text-sm text-ink-soft">
-              {capabilities.map((c) => (
-                <li key={c} className="flex items-center gap-2">
-                  <span className="text-coral">/</span>
-                  {c}
-                </li>
+            <h2 className="font-display text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
+              Marketing with an <em className="italic text-accent">owner&rsquo;s</em>{" "}
+              eye.
+            </h2>
+            <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink-soft">
+              {BIO.map((para) => (
+                <p key={para.slice(0, 24)}>{para}</p>
               ))}
-            </ul>
+            </div>
           </Reveal>
         </div>
       </Container>

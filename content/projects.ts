@@ -1,20 +1,32 @@
 /**
- * Portfolio content lives here as typed data — no CMS, no MDX.
- * Add a project by appending to `projects`. Everything (home index,
- * /work grid, and each case-study page) renders from this array.
+ * Portfolio content — real projects delivered by Tony Syme, curated to the
+ * strongest ~12 across web, brand, campaign, and creative work.
  *
- * There are no image files: `accent` drives a generated poster block so
- * every project renders immediately. Drop real art in later by swapping
- * <CoverBlock> for <Image> and adding a `cover` field.
+ * There is no CMS and no MDX; add a project by appending here. Every surface
+ * (home index, /work grid, and each /work/[slug] case study) renders from
+ * this array.
+ *
+ * Metrics are percentages / counts / outcomes only — never absolute £, per
+ * the site brief. Years are approximate and worth confirming with Tony.
+ *
+ * No cover art exists yet: `accent` drives a generated poster block so every
+ * project renders immediately. To use real images, set `coverImage` (and
+ * `gallery[].src`) to files under /public/work/<slug>/ — components upgrade
+ * from the generated block to <Image> automatically.
  */
 
-export type Category = "Campaign" | "Brand" | "Website";
+export type Category = "Web" | "Brand" | "Campaign" | "Creative";
 
 export type Metric = {
-  /** Big number, e.g. "+240%" or "8.4M". */
+  /** A percentage, count, or short outcome phrase — e.g. "+40%", "27", "Sold-out". */
   value: string;
-  /** What it measures, e.g. "brand awareness". */
   label: string;
+};
+
+export type GalleryItem = {
+  caption: string;
+  /** Optional real image under /public; falls back to a generated panel. */
+  src?: string;
 };
 
 export type Project = {
@@ -23,138 +35,350 @@ export type Project = {
   client: string;
   category: Category;
   year: number;
-  /** One line for the index and cards. */
   summary: string;
-  /** The single coral metric shown on the results index. */
+  /** The single coral figure shown on the results index. */
   headlineMetric: Metric;
   /** Hex used to generate the poster/cover block. */
   accent: string;
   tags: string[];
+  /** Optional real cover image under /public; falls back to the poster block. */
+  coverImage?: string;
 
-  // ---- case study ----
+  // ---- case study (Challenge / Solution / Result) ----
   role: string[];
   challenge: string;
-  approach: string;
-  /** Results — a real data set, so a metric grid is warranted here. */
+  solution: string;
   results: Metric[];
-  /** Captions for the placeholder gallery panels. */
-  gallery: string[];
+  gallery: GalleryItem[];
 };
 
 export const projects: Project[] = [
   {
-    slug: "make-them-look",
-    title: "Nightshade",
-    client: "Halden Distillery",
-    category: "Campaign",
-    year: 2025,
-    summary:
-      "A launch campaign that turned a small-batch gin into a sold-out cult object.",
-    headlineMetric: { value: "+240%", label: "brand awareness" },
-    accent: "#3b2f6b",
-    tags: ["Strategy", "Art direction", "Social", "OOH"],
-    role: ["Creative direction", "Campaign strategy", "Art direction"],
-    challenge:
-      "Halden had a beautiful product and a rounding-error marketing budget, launching into a category where every bottle screams botanical heritage. Blending in was the one thing they couldn't afford.",
-    approach:
-      "We leaned all the way into the name. One idea — a gin with a dark side — carried across a teaser phase of unbranded OOH, a set of dusk-lit product films, and a bartender seeding program that put Nightshade behind the right bars before a single ad ran. The line held everything together: made to be missed after midnight.",
-    results: [
-      { value: "+240%", label: "aided brand awareness" },
-      { value: "6 wks", label: "to first sell-out" },
-      { value: "22", label: "stockists to 190" },
-    ],
-    gallery: ["Teaser OOH — phase one", "Product film stills", "Bar activation kit"],
-  },
-  {
-    slug: "field-notes",
-    title: "Field Notes",
-    client: "Northbound Supply Co.",
-    category: "Brand",
-    year: 2024,
-    summary:
-      "A full rebrand that moved an outdoor label from wholesale afterthought to DTC destination.",
-    headlineMetric: { value: "3.2×", label: "DTC revenue" },
-    accent: "#2f5d4a",
-    tags: ["Identity", "Packaging", "Art direction", "Guidelines"],
-    role: ["Brand strategy", "Identity design", "Packaging"],
-    challenge:
-      "Northbound made genuinely great gear that looked like everyone else's on the shelf. Retail buyers liked them; customers couldn't remember them. The brand had no voice of its own.",
-    approach:
-      "We rebuilt the identity around the idea of the field note — a maker's logbook. A utilitarian wordmark, a grid system borrowed from surveyor's maps, and packaging you'd actually keep. Every touchpoint reads like it was documented in the field, because the audience is out there too.",
-    results: [
-      { value: "3.2×", label: "DTC revenue, year one" },
-      { value: "+61%", label: "repeat purchase rate" },
-      { value: "18%", label: "wholesale to 54% DTC" },
-    ],
-    gallery: ["Wordmark & marque", "Packaging system", "Field guide & guidelines"],
-  },
-  {
-    slug: "tidewater",
-    title: "Tidewater",
-    client: "Tidewater Surf",
-    category: "Website",
-    year: 2025,
-    summary:
-      "A commerce site rebuilt around the feeling of the first wave of the morning.",
-    headlineMetric: { value: "+58%", label: "conversion rate" },
-    accent: "#1f6f86",
-    tags: ["UX", "Art direction", "Next.js", "Motion"],
-    role: ["Art direction", "UX design", "Front-end build"],
-    challenge:
-      "The old store buried the product under stock photography and a checkout that fought the customer. Great boards, forgettable site, and a mobile conversion rate that told the whole story.",
-    approach:
-      "We designed around motion and restraint: full-bleed swell footage on the way in, then a clean, fast, thumb-first buying flow that gets out of the way. Built on Next.js so the pages feel instant on a phone in a parking lot — where surfers actually buy.",
-    results: [
-      { value: "+58%", label: "mobile conversion" },
-      { value: "-41%", label: "checkout drop-off" },
-      { value: "0.9s", label: "median load time" },
-    ],
-    gallery: ["Landing — swell intro", "Product & configurator", "Checkout flow"],
-  },
-  {
-    slug: "second-sun",
-    title: "Second Sun",
-    client: "Solstice Festival",
-    category: "Campaign",
-    year: 2024,
-    summary:
-      "A social-first identity for a music festival that had to feel new without losing its regulars.",
-    headlineMetric: { value: "8.4M", label: "impressions" },
-    accent: "#c2451f",
-    tags: ["Identity", "Social", "Motion", "Content"],
-    role: ["Creative direction", "Design system", "Content strategy"],
-    challenge:
-      "Solstice was rebranding for its tenth year. Longtime fans were protective; the festival needed to grow a younger audience without reading as a sellout to the people who built it.",
-    approach:
-      "One flexible mark — a sun caught mid-set — that could be posterized, animated, and remixed by fans. We shipped a content kit so the community made most of the feed themselves, then let paid amplify only what already worked.",
-    results: [
-      { value: "8.4M", label: "campaign impressions" },
-      { value: "+37%", label: "under-25 ticket sales" },
-      { value: "Sold out", label: "11 days early" },
-    ],
-    gallery: ["Identity in motion", "Creator content kit", "On-site environmental"],
-  },
-  {
-    slug: "ampersand",
-    title: "Ampersand",
-    client: "Ampersand Studio",
+    slug: "the-attic",
+    title: "The Attic",
+    client: "The Attic, Kirriemuir",
     category: "Brand",
     year: 2023,
     summary:
-      "An identity for a design studio confident enough to be its own hardest client.",
-    headlineMetric: { value: "2×", label: "inbound leads" },
-    accent: "#7a2f4a",
-    tags: ["Identity", "Web", "Editorial"],
-    role: ["Brand identity", "Art direction", "Web design"],
+      "Branding and a booking-ready site that grew a small-town music venue by roughly 3.5×.",
+    headlineMetric: { value: "+249%", label: "annual turnover growth" },
+    accent: "#3a2d5c",
+    tags: ["Brand identity", "Web development", "Ticketing", "Promotion"],
+    role: ["Creative direction", "Brand identity", "Web build"],
     challenge:
-      "A studio's own brand is the one everybody judges. Ampersand needed an identity that proved the point in the first three seconds — without disappearing into design-world sameness.",
-    approach:
-      "We made the ampersand do the talking: one glyph, set enormous, used as image, texture, and navigation all at once. The rest of the system stays deliberately plain so the mark is always the loudest thing in the room.",
+      "Kirriemuir needed a live-music venue that could pull city-calibre acts to a small town. The brand had to balance underground energy with local accessibility, and the site had to promote events and sell tickets without friction.",
+    solution:
+      "A bold logo with a modern club edge, a flexible CMS for event listings and ticket links, and a positioning line — 'Perched Above the Ordinary' — that made the room feel like a destination. As co-founder I ran the promotion end-to-end.",
     results: [
-      { value: "2×", label: "qualified inbound leads" },
-      { value: "+3", label: "retainer clients in Q1" },
-      { value: "1", label: "very sharp glyph" },
+      { value: "+249%", label: "annual turnover growth" },
+      { value: "Sold-out", label: "headline nights" },
+      { value: "City acts", label: "in a small town" },
     ],
-    gallery: ["The glyph, at scale", "Editorial system", "Studio site"],
+    gallery: [
+      { caption: "Logo & brand identity" },
+      { caption: "Event listings CMS" },
+      { caption: "Gig promotion" },
+    ],
+  },
+  {
+    slug: "heatplan-scotland",
+    title: "HeatPlan Scotland",
+    client: "HeatPlan Scotland",
+    category: "Web",
+    year: 2024,
+    summary:
+      "A postcode-validated enquiry engine that lifted heating-install lead conversion by 40%.",
+    headlineMetric: { value: "+40%", label: "lead conversion" },
+    accent: "#14504f",
+    coverImage: "/work/heatplan-scotland/cover.png",
+    tags: ["Web development", "Lead generation", "CRM", "Brand positioning"],
+    role: ["Web build", "Lead-generation strategy"],
+    challenge:
+      "HeatPlan needed to manage large-scale heating-installation enquiries across Scotland without drowning in manual admin.",
+    solution:
+      "A postcode-validated enquiry system wired to automated CRM syncing, so qualified leads land clean and route themselves to the right place.",
+    results: [
+      { value: "+40%", label: "lead conversion" },
+      { value: "Automated", label: "CRM syncing" },
+      { value: "Less", label: "manual admin" },
+    ],
+    gallery: [
+      { caption: "Enquiry flow" },
+      { caption: "Postcode validation" },
+      { caption: "CRM integration" },
+    ],
+  },
+  {
+    slug: "chromebook-roadshow",
+    title: "Chromebook Roadshow",
+    client: "Chromebook Roadshow",
+    category: "Campaign",
+    year: 2023,
+    summary:
+      "A high-energy microsite and campaign that booked every date of a regional tour to capacity.",
+    headlineMetric: { value: "100%", label: "capacity, all dates" },
+    accent: "#1b4fa0",
+    tags: ["Campaign branding", "Event microsite", "Booking", "Digital strategy"],
+    role: ["Campaign branding", "Microsite build"],
+    challenge:
+      "An education initiative needed a recognisable brand and a registration system for a regional roadshow — and every date had to fill.",
+    solution:
+      "A vibrant, mobile-first microsite with integrated booking management, driven by targeted digital promotion across the region.",
+    results: [
+      { value: "100%", label: "capacity booked" },
+      { value: "Every date", label: "at capacity" },
+      { value: "Mobile-first", label: "registration" },
+    ],
+    gallery: [
+      { caption: "Campaign identity" },
+      { caption: "Booking microsite" },
+      { caption: "Event promotion" },
+    ],
+  },
+  {
+    slug: "kyle-falconer",
+    title: "Kyle Falconer",
+    client: "Kyle Falconer (The View)",
+    category: "Creative",
+    year: 2024,
+    summary:
+      "A cohesive tour-poster suite across 27 dates for one of Scotland's best-known frontmen.",
+    headlineMetric: { value: "27", label: "tour dates" },
+    accent: "#5c1f46",
+    tags: ["Poster design", "Tour campaign", "Art direction"],
+    role: ["Poster design", "Art direction"],
+    challenge:
+      "A major Scottish tour needed visually impactful posters that stayed on-brand across every date — and held up when the run was extended.",
+    solution:
+      "A high-impact poster system built for consistency: an initial 15-date suite, then a 12-date extension, delivered as one coherent look across the whole circuit.",
+    results: [
+      { value: "27", label: "dates postered" },
+      { value: "One system", label: "15 + 12 extension" },
+      { value: "Ticket", label: "awareness driven" },
+    ],
+    gallery: [
+      { caption: "Tour poster series" },
+      { caption: "15-date launch" },
+      { caption: "12-date extension" },
+    ],
+  },
+  {
+    slug: "club-one-fitness",
+    title: "Club One Fitness",
+    client: "Club One Fitness",
+    category: "Web",
+    year: 2025,
+    summary:
+      "A multi-site rebuild with bookings, shop, and automated email flows for a ladies-only gym chain.",
+    headlineMetric: { value: "3 gyms", label: "one platform" },
+    accent: "#52234a",
+    coverImage: "/work/club-one-fitness/cover.png",
+    tags: ["Web development", "E-commerce", "Email automation", "Brand"],
+    role: ["Web build", "Marketing automation", "Content"],
+    challenge:
+      "Club One's ladies-only gyms across Fife, Forfar and Montrose needed to move past placeholder content to a professional site with bookings and an automated lead engine.",
+    solution:
+      "A rebuilt, community-focused site with a 'Meet the Owner' trust layer, TeamUp class bookings, a WooCommerce + Stripe shop, and automated email flows for welcomes, abandoned carts, and re-engagement.",
+    results: [
+      { value: "3 sites", label: "unified" },
+      { value: "Automated", label: "email flows" },
+      { value: "Bookings", label: "+ shop live" },
+    ],
+    gallery: [
+      { caption: "Multi-site homepage" },
+      { caption: "Class booking (TeamUp)" },
+      { caption: "Shop (WooCommerce)" },
+    ],
+  },
+  {
+    slug: "heatmasters",
+    title: "HeatMasters",
+    client: "HeatMasters",
+    category: "Brand",
+    year: 2023,
+    summary:
+      "A memorable mascot brand and an instant-quote tool that launched a heating firm from a standing start.",
+    headlineMetric: { value: "Standing start", label: "to local challenger" },
+    accent: "#1e5a8a",
+    tags: ["Logo design", "Web development", "Lead generation", "Brand positioning"],
+    role: ["Brand identity", "Web build"],
+    challenge:
+      "HeatMasters had to enter the competitive Angus heating market against national providers with far bigger budgets — needing a warm, professional identity and a site that generated leads on its own.",
+    solution:
+      "The 'HeatMasters Polar Bear' gave the brand a memorable face; an integrated 'instant boiler quote' tool captured leads immediately; and the narrative leaned on local reliability, speed, and trust.",
+    results: [
+      { value: "Instant-quote", label: "lead tool" },
+      { value: "Memorable", label: "mascot brand" },
+      { value: "Local", label: "challenger presence" },
+    ],
+    gallery: [
+      { caption: "Polar Bear logo" },
+      { caption: "Instant boiler-quote tool" },
+      { caption: "Homepage" },
+    ],
+  },
+  {
+    slug: "amac-promotions",
+    title: "AMAC Promotions",
+    client: "AMAC Promotions",
+    category: "Campaign",
+    year: 2024,
+    summary:
+      "A youthful, high-energy promoter brand and operations hub for the Scottish music circuit.",
+    headlineMetric: { value: "Debut year", label: "profitable" },
+    accent: "#6b4a10",
+    tags: ["Brand identity", "Web development", "Event promotion", "Ticketing"],
+    role: ["Brand identity", "Campaign design", "Web build"],
+    challenge:
+      "A new promotions company needed a brand that felt young and high-energy while carrying the professional credibility to secure bookings with venues and artists.",
+    solution:
+      "A playful, retro-styled logo with bold typography, plus a digital hub for show promotion, event management, and artist enquiries — positioning AMAC as a fresh, 'big-stage ready' partner.",
+    results: [
+      { value: "Profitable", label: "first year" },
+      { value: "Big-stage", label: "ready brand" },
+      { value: "Venue", label: "partnerships" },
+    ],
+    gallery: [
+      { caption: "Retro logo" },
+      { caption: "Promotion hub" },
+      { caption: "Event campaigns" },
+    ],
+  },
+  {
+    slug: "very-spexy",
+    title: "Very Spexy",
+    client: "Very Spexy",
+    category: "Web",
+    year: 2024,
+    summary:
+      "A premium eyewear boutique brought online — store, styling bookings, and a sustainability story.",
+    headlineMetric: { value: "Boutique", label: "→ online" },
+    accent: "#234d3a",
+    coverImage: "/work/very-spexy/cover.png",
+    tags: ["E-commerce", "Brand positioning", "Local SEO", "Sustainability"],
+    role: ["E-commerce build", "Brand storytelling"],
+    challenge:
+      "Very Spexy needed to translate the premium, personalised feel of their Aberdeen and Peterhead boutiques into a digital storefront — showcasing frames while communicating styling, repairs, and sustainability.",
+    solution:
+      "A sophisticated online store that kept the boutique aesthetic, booking for one-to-one styling and 'Eyewear MOT' services, and a dedicated section for their Ecologi sustainability partnership.",
+    results: [
+      { value: "Online", label: "sales + bookings" },
+      { value: "Boutique", label: "feel, digital reach" },
+      { value: "Eco", label: "story built in" },
+    ],
+    gallery: [
+      { caption: "Storefront" },
+      { caption: "Styling bookings" },
+      { caption: "Sustainability section" },
+    ],
+  },
+  {
+    slug: "inspiration-hub",
+    title: "The Inspiration Hub",
+    client: "Forth Valley RIC",
+    category: "Web",
+    year: 2023,
+    summary:
+      "A search-first resource hub uniting three local authorities' educators on one platform.",
+    headlineMetric: { value: "3 authorities", label: "one hub" },
+    accent: "#2b3a6b",
+    tags: ["Website development", "UX design", "Brand identity"],
+    role: ["UX design", "Web build", "Brand"],
+    challenge:
+      "The Forth Valley Regional Improvement Collaborative — Stirling, Falkirk and Clackmannanshire — needed a centralised hub for resource sharing, professional learning, and collaboration across the region.",
+    solution:
+      "A clean, high-volume resource platform with a search-first layout so educators find curriculum supports and CPD quickly, wrapped in an inspiring regional identity.",
+    results: [
+      { value: "3 authorities", label: "on one hub" },
+      { value: "Search-first", label: "resource access" },
+      { value: "Regional", label: "collaboration" },
+    ],
+    gallery: [
+      { caption: "Resource hub" },
+      { caption: "Search-first UX" },
+      { caption: "Regional identity" },
+    ],
+  },
+  {
+    slug: "bonnie-scotland-presents",
+    title: "Bonnie Scotland Presents",
+    client: "Bonnie Scotland Presents",
+    category: "Brand",
+    year: 2024,
+    summary:
+      "A single media home for a brand's blog, podcast, and event ticketing.",
+    headlineMetric: { value: "One hub", label: "site · podcast · tickets" },
+    accent: "#43305e",
+    coverImage: "/work/bonnie-scotland-presents/cover.png",
+    tags: ["Brand identity", "Web development", "Podcasting", "Ticketing"],
+    role: ["Brand narrative", "Web build"],
+    challenge:
+      "Bonnie Scotland Presents needed one platform to hold a multi-faceted media presence — brand messaging, blog, a podcast series, and event ticketing.",
+    solution:
+      "A full-brand website with a seamless CMS for blog and podcast content, a user-friendly ticketing system for bookings, and a cohesive narrative aligning every channel.",
+    results: [
+      { value: "All-in-one", label: "media hub" },
+      { value: "Podcast", label: "+ blog CMS" },
+      { value: "Ticketing", label: "built in" },
+    ],
+    gallery: [
+      { caption: "Brand & site" },
+      { caption: "Podcast hub" },
+      { caption: "Ticketing" },
+    ],
+  },
+  {
+    slug: "the-greenporium",
+    title: "The Greenporium",
+    client: "The Greenporium",
+    category: "Creative",
+    year: 2023,
+    summary:
+      "A premium brand identity and custom tin packaging for a CBD wellness range.",
+    headlineMetric: { value: "Shelf-ready", label: "brand + packaging" },
+    accent: "#3f4a1e",
+    tags: ["Brand identity", "Packaging design"],
+    role: ["Brand identity", "Packaging design"],
+    challenge:
+      "The Greenporium needed a distinct identity and physical packaging to stand out in the crowded CBD wellness market while conveying trust, quality, and premium appeal.",
+    solution:
+      "A sleek identity built around natural ingredients and wellness, paired with custom high-quality tin packaging that protects freshness and gives a premium tactile experience — clear, compliant, and shelf-ready.",
+    results: [
+      { value: "Premium", label: "shelf presence" },
+      { value: "Custom", label: "tin packaging" },
+      { value: "Compliant", label: "+ distinctive" },
+    ],
+    gallery: [
+      { caption: "Brand identity" },
+      { caption: "Tin packaging" },
+      { caption: "Product range" },
+    ],
+  },
+  {
+    slug: "alloafirst",
+    title: "AlloaFirst",
+    client: "AlloaFirst BID",
+    category: "Web",
+    year: 2022,
+    summary:
+      "A multi-vendor 'digital high street' letting local shops sell under one roof.",
+    headlineMetric: { value: "Multi-vendor", label: "digital high street" },
+    accent: "#26333f",
+    tags: ["E-commerce", "Multi-vendor", "Local trade"],
+    role: ["E-commerce build", "Multi-vendor strategy"],
+    challenge:
+      "A Business Improvement District needed a centralised online 'high street' so multiple local retailers could sell under one umbrella.",
+    solution:
+      "A custom multi-vendor Shopify platform giving small local shops a professional e-commerce outlet without each having to build their own.",
+    results: [
+      { value: "Multi-vendor", label: "marketplace" },
+      { value: "Local shops", label: "online" },
+      { value: "One", label: "digital high street" },
+    ],
+    gallery: [
+      { caption: "Marketplace" },
+      { caption: "Vendor storefronts" },
+      { caption: "Checkout" },
+    ],
   },
 ];

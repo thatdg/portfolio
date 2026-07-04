@@ -1,10 +1,11 @@
 import Link from "next/link";
 import { Container } from "./Container";
+import { CONTACT } from "@/content/site";
 
 const links = [
   { href: "/work", label: "Work" },
+  { href: "/#experience", label: "Experience" },
   { href: "/#about", label: "About" },
-  { href: "/#contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -14,24 +15,33 @@ export function Nav() {
         <Link
           href="/"
           className="font-display text-2xl font-semibold tracking-tight"
-          aria-label="Tony — home"
+          aria-label={`${CONTACT.name} — home`}
         >
-          Tony<span className="text-coral">.</span>
+          Tony<span className="text-accent">.</span>
         </Link>
 
         <nav className="flex items-center gap-8">
           <ul className="hidden items-center gap-8 font-grotesk text-[0.78rem] uppercase tracking-[0.14em] text-ink-soft md:flex">
             {links.map((l) => (
               <li key={l.href}>
-                <Link href={l.href} className="transition-colors hover:text-coral">
+                <Link href={l.href} className="transition-colors hover:text-accent">
                   {l.label}
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href={CONTACT.cvUrl}
+                download
+                className="transition-colors hover:text-accent"
+              >
+                CV
+              </a>
+            </li>
           </ul>
           <Link
             href="/#contact"
-            className="rounded-full bg-ink px-5 py-2 font-grotesk text-[0.78rem] uppercase tracking-[0.14em] text-paper transition-colors hover:bg-coral"
+            className="rounded-full bg-ink px-5 py-2 font-grotesk text-[0.78rem] uppercase tracking-[0.14em] text-paper transition-colors hover:bg-accent"
           >
             Let&rsquo;s talk
           </Link>

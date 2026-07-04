@@ -8,7 +8,7 @@ import { getProjects } from "@/lib/projects";
 export const metadata: Metadata = {
   title: "Work",
   description:
-    "Selected marketing campaigns, brand identities, and websites by Tony.",
+    "Selected web, brand, campaign, and creative projects by Tony Syme — B2B marketing across trade, live events, education, and retail.",
 };
 
 export default function WorkPage() {
@@ -24,11 +24,12 @@ export default function WorkPage() {
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[0.95] tracking-tight md:text-8xl">
             Work that
             <br />
-            earned its <em className="italic text-coral">keep.</em>
+            earned its <em className="italic text-accent">keep.</em>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-soft">
-            Campaigns, brands, and websites — each one measured by what it
-            actually moved, not how it looked in a case-study grid.
+            Web, brand, campaigns, and creative — for trade, live events,
+            education, and retail clients across Scotland. Each one measured by
+            what it actually moved.
           </p>
         </Container>
       </section>

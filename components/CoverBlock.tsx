@@ -1,25 +1,41 @@
+import Image from "next/image";
 import type { Project } from "@/content/projects";
 
 type CoverProject = Pick<
   Project,
-  "title" | "client" | "year" | "category" | "accent"
+  "title" | "client" | "year" | "category" | "accent" | "coverImage"
 >;
 
 /**
- * A generated poster used in place of real cover art. The `accent` hex
- * drives a gradient toward ink, so each project reads as an intentional
- * poster rather than a grey placeholder. Swap for next/image when real
- * artwork exists.
+ * Project cover. If the project has a real `coverImage` (a file under
+ * /public), it renders that; otherwise it generates a poster from the
+ * `accent` hex so every project looks intentional before art exists.
  */
 export function CoverBlock({
   project,
   className = "",
   titleClassName = "text-3xl md:text-5xl",
+  sizes = "(max-width: 768px) 100vw, 50vw",
 }: {
   project: CoverProject;
   className?: string;
   titleClassName?: string;
+  sizes?: string;
 }) {
+  if (project.coverImage) {
+    return (
+      <div className={`relative overflow-hidden ${className}`}>
+        <Image
+          src={project.coverImage}
+          alt={`${project.title} — ${project.category} project`}
+          fill
+          sizes={sizes}
+          className="object-cover"
+        />
+      </div>
+    );
+  }
+
   return (
     <div
       className={`relative overflow-hidden isolate ${className}`}
@@ -53,7 +69,7 @@ export function CoverBlock({
         </div>
 
         <div>
-          <span className="inline-block h-1 w-10 bg-coral" />
+          <span className="inline-block h-1 w-10 bg-accent" />
           <h3
             className={`font-display font-semibold leading-[0.95] mt-3 ${titleClassName}`}
           >

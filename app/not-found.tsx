@@ -11,7 +11,7 @@ export default function NotFound() {
         <h1 className="mt-6 font-display text-6xl font-semibold leading-[0.95] tracking-tight md:text-8xl">
           Nothing to
           <br />
-          see <em className="italic text-coral">here.</em>
+          see <em className="italic text-accent">here.</em>
         </h1>
         <p className="mt-6 max-w-md text-lg leading-relaxed text-ink-soft">
           That page moved, or never existed. The work, however, is very much
@@ -19,7 +19,7 @@ export default function NotFound() {
         </p>
         <Link
           href="/work"
-          className="mt-10 inline-block rounded-full bg-ink px-6 py-3 font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-paper transition-colors hover:bg-coral"
+          className="mt-10 inline-block rounded-full bg-ink px-6 py-3 font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-paper transition-colors hover:bg-accent"
         >
           See the work
         </Link>

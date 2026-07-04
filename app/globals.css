@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 /* ------------------------------------------------------------------ *
- * Design tokens — bold editorial. Coral is the one loud voice;
- * everything else stays warm, quiet and disciplined.
+ * Design tokens — bold editorial. A cobalt accent is the one loud
+ * voice; everything else stays warm, quiet and disciplined.
  * ------------------------------------------------------------------ */
 @theme {
   --color-paper: #f3eee3; /* warm paper base            */
@@ -11,8 +11,8 @@
   --color-ink-soft: #3a332a; /* secondary on paper        */
   --color-stone: #837a6a; /* muted labels / captions      */
   --color-sand: #ded4c1; /* hairlines, dividers          */
-  --color-coral: #ff4e2e; /* THE accent                  */
-  --color-coral-deep: #e2381a; /* pressed / hover        */
+  --color-accent: #2348e0; /* THE accent — bold cobalt    */
+  --color-accent-deep: #1836bf; /* pressed / hover        */
 }
 
 /* Font tokens map to the next/font CSS variables set on <html>. */
@@ -38,12 +38,12 @@
   }
 
   ::selection {
-    background: var(--color-coral);
+    background: var(--color-accent);
     color: var(--color-paper);
   }
 
   :focus-visible {
-    outline: 2px solid var(--color-coral);
+    outline: 2px solid var(--color-accent);
     outline-offset: 3px;
   }
 

@@ -1,17 +1,20 @@
 /**
- * Site-wide details — the things Tony will want to edit first.
- * Placeholder values; swap for the real ones.
+ * Site-wide details — the things to edit first.
+ * Real data from Tony's CV; swap the LinkedIn URL and drop in the CV PDF.
  */
 export const CONTACT = {
-  name: "Tony Marchetti",
-  role: "Creative Director — Marketing & Design",
-  email: "hello@tonymarchetti.com",
-  location: "Brooklyn, NY",
-  availability: "Available for freelance & studio projects",
+  name: "Tony Syme",
+  firstName: "Tony",
+  role: "B2B Marketing Manager",
+  email: "tonysyme.ts2@gmail.com",
+  phone: "07886 759197",
+  phoneHref: "+447886759197",
+  location: "Stirling / Glasgow, Scotland",
+  availability: "Open to B2B marketing manager roles",
+  /** Drop tony-syme-cv.pdf into /public to enable the download button. */
+  cvUrl: "/tony-syme-cv.pdf",
   year: 2026,
   socials: [
-    { label: "Instagram", href: "https://instagram.com/" },
-    { label: "LinkedIn", href: "https://linkedin.com/" },
-    { label: "Read.cv", href: "https://read.cv/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/anthony-syme-5043651a8/" },
   ],
 } as const;

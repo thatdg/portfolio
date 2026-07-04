@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 
 /**
  * The signature device: selected work as an editorial contents page.
- * Each row is a project; the coral figure on the right is its headline
+ * Each row is a project; the accent figure on the right is its headline
  * result — because marketing work is remembered by what it moved.
  */
 export function WorkIndex({
@@ -32,7 +32,7 @@ export function WorkIndex({
           {showViewAll && (
             <Link
               href="/work"
-              className="group hidden items-center gap-2 font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-ink-soft transition-colors hover:text-coral sm:inline-flex"
+              className="group hidden items-center gap-2 font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-ink-soft transition-colors hover:text-accent sm:inline-flex"
             >
               All work
               <span className="transition-transform group-hover:translate-x-1">
@@ -51,7 +51,7 @@ export function WorkIndex({
                   className="group grid grid-cols-1 gap-x-6 gap-y-3 border-b border-sand py-7 transition-colors hover:bg-paper-2 md:grid-cols-[3.5rem_1fr_auto] md:items-center md:py-8"
                 >
                   {/* index */}
-                  <span className="font-grotesk text-sm text-stone transition-colors group-hover:text-coral">
+                  <span className="font-grotesk text-sm text-stone transition-colors group-hover:text-accent">
                     {String(i + 1).padStart(2, "0")}
                   </span>
 
@@ -62,7 +62,7 @@ export function WorkIndex({
                         {p.title}
                       </h3>
                       <span
-                        className="translate-x-[-6px] text-coral opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
+                        className="translate-x-[-6px] text-accent opacity-0 transition-all group-hover:translate-x-0 group-hover:opacity-100"
                         aria-hidden="true"
                       >
                         &#8599;
@@ -75,7 +75,7 @@ export function WorkIndex({
 
                   {/* headline metric */}
                   <div className="md:text-right">
-                    <div className="font-display text-3xl font-semibold text-coral md:text-4xl">
+                    <div className="font-display text-3xl font-semibold text-accent md:text-4xl">
                       {p.headlineMetric.value}
                     </div>
                     <div className="font-grotesk text-[0.7rem] uppercase tracking-[0.14em] text-stone">
@@ -92,7 +92,7 @@ export function WorkIndex({
           <div className="mt-8 sm:hidden">
             <Link
               href="/work"
-              className="font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-coral"
+              className="font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-accent"
             >
               All work &rarr;
             </Link>

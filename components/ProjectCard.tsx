@@ -14,7 +14,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
       <div className="mt-5 flex items-start justify-between gap-6">
         <div>
-          <h3 className="font-display text-2xl font-semibold leading-tight transition-colors group-hover:text-coral md:text-3xl">
+          <h3 className="font-display text-2xl font-semibold leading-tight transition-colors group-hover:text-accent md:text-3xl">
             {project.title}
           </h3>
           <p className="mt-1 font-grotesk text-[0.7rem] uppercase tracking-[0.14em] text-stone">
@@ -22,7 +22,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </p>
         </div>
         <div className="shrink-0 text-right">
-          <div className="font-display text-2xl font-semibold text-coral">
+          <div className="font-display text-2xl font-semibold text-accent">
             {project.headlineMetric.value}
           </div>
           <div className="font-grotesk text-[0.66rem] uppercase tracking-[0.12em] text-stone">

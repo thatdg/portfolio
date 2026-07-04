@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/Container";
@@ -48,7 +49,7 @@ export default async function CaseStudyPage({
           <Container>
             <Link
               href="/work"
-              className="group inline-flex items-center gap-2 font-grotesk text-[0.78rem] uppercase tracking-[0.14em] text-stone transition-colors hover:text-coral"
+              className="group inline-flex items-center gap-2 font-grotesk text-[0.78rem] uppercase tracking-[0.14em] text-stone transition-colors hover:text-accent"
             >
               <span className="transition-transform group-hover:-translate-x-1">
                 &larr;
@@ -99,7 +100,7 @@ export default async function CaseStudyPage({
                 <NarrativeBlock label="The challenge" body={project.challenge} />
               </Reveal>
               <Reveal delay={120}>
-                <NarrativeBlock label="The approach" body={project.approach} />
+                <NarrativeBlock label="The solution" body={project.solution} />
               </Reveal>
             </div>
           </Container>
@@ -114,7 +115,7 @@ export default async function CaseStudyPage({
             <dl className="mt-10 grid gap-y-12 sm:grid-cols-3 sm:gap-x-8">
               {project.results.map((m) => (
                 <div key={m.label}>
-                  <dt className="font-display text-6xl font-semibold text-coral md:text-7xl">
+                  <dt className="font-display text-6xl font-semibold text-accent md:text-7xl">
                     {m.value}
                   </dt>
                   <dd className="mt-2 max-w-[16ch] font-grotesk text-sm uppercase tracking-[0.12em] text-ink-soft">
@@ -130,18 +131,30 @@ export default async function CaseStudyPage({
         <section className="py-16 md:py-24">
           <Container>
             <div className="grid gap-6 md:grid-cols-3">
-              {project.gallery.map((caption, i) => (
-                <Reveal key={caption} delay={i * 80}>
+              {project.gallery.map((item, i) => (
+                <Reveal key={item.caption} delay={i * 80}>
                   <figure>
-                    <div
-                      className="aspect-[4/3] w-full overflow-hidden"
-                      style={{
-                        background: `linear-gradient(155deg, ${project.accent} 0%, #17130d 125%)`,
-                      }}
-                      aria-hidden="true"
-                    />
+                    <div className="relative aspect-[4/3] w-full overflow-hidden">
+                      {item.src ? (
+                        <Image
+                          src={item.src}
+                          alt={item.caption}
+                          fill
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          className="object-cover"
+                        />
+                      ) : (
+                        <div
+                          className="absolute inset-0"
+                          style={{
+                            background: `linear-gradient(155deg, ${project.accent} 0%, #17130d 125%)`,
+                          }}
+                          aria-hidden="true"
+                        />
+                      )}
+                    </div>
                     <figcaption className="mt-3 font-grotesk text-[0.72rem] uppercase tracking-[0.14em] text-stone">
-                      {caption}
+                      {item.caption}
                     </figcaption>
                   </figure>
                 </Reveal>
@@ -161,11 +174,11 @@ export default async function CaseStudyPage({
                 <p className="font-grotesk text-[0.78rem] uppercase tracking-[0.16em] text-stone">
                   Next project
                 </p>
-                <h2 className="mt-3 font-display text-5xl font-semibold tracking-tight transition-colors group-hover:text-coral md:text-7xl">
+                <h2 className="mt-3 font-display text-5xl font-semibold tracking-tight transition-colors group-hover:text-accent md:text-7xl">
                   {next.title}
                 </h2>
               </div>
-              <span className="font-display text-5xl text-coral transition-transform group-hover:translate-x-2 md:text-7xl">
+              <span className="font-display text-5xl text-accent transition-transform group-hover:translate-x-2 md:text-7xl">
                 &rarr;
               </span>
             </Link>
@@ -193,7 +206,7 @@ function NarrativeBlock({ label, body }: { label: string; body: string }) {
   return (
     <div>
       <h2 className="flex items-center gap-3 font-grotesk text-[0.8rem] uppercase tracking-[0.16em] text-ink-soft">
-        <span className="h-px w-8 bg-coral" />
+        <span className="h-px w-8 bg-accent" />
         {label}
       </h2>
       <p className="mt-5 text-xl leading-relaxed text-ink md:text-2xl">{body}</p>

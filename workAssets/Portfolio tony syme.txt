@@ -1,0 +1,252 @@
+﻿Project Showcase: Digital & Brand Strategy
+A collection of creative solutions delivered by MadeAt45, focusing on brand positioning, conversion-led web design, and strategic market entry.
+HeatMasters
+Services: Logo Design, Web Development, Brand Positioning
+Challenge
+HeatMasters aimed to enter the competitive Angus heating and boiler market. They needed to compete with national providers who possessed significantly larger marketing budgets. The primary requirement was an approachable yet professional identity paired with a website capable of automating lead generation.
+Solution
+* Mascot Branding: Created the "HeatMasters Polar Bear" logo, providing a memorable and unique visual identity in a crowded industry.
+* Conversion Optimization: Developed a website featuring an integrated "instant boiler quote" tool to streamline the user journey and capture leads immediately.
+* Strategic Positioning: Focused the brand narrative on local reliability, speed, and trust to differentiate from faceless national corporations.
+Result
+HeatMasters successfully launched from a standing start, consistently generating online enquiries and establishing a formidable local presence against national competitors.
+The Attic (Kirriemuir)
+Services: Logo Design, Web Development, Brand Positioning
+Challenge
+The objective was to launch a new live music venue in Kirriemuir to revitalize the local nightlife scene. The branding needed to strike a balance between "underground energy" and "local accessibility," supported by a platform for seamless event promotion.
+Solution
+* Modern Visuals: Designed a bold logo that references classic club aesthetics with a contemporary twist.
+* Functional CMS: Built a website with a flexible Content Management System (CMS) for managing event listings and ticket sales links.
+* Tagline Strategy: Positioned the venue as "Perched Above the Ordinary," emphasizing its ability to bring high-caliber city acts to a smaller town environment.
+Result
+The Attic established immediate credibility with both touring artists and local audiences, creating a distinct identity that separated it from traditional small-town venues.
+AMAC Promotions
+Services: Logo Design, Web Development, Brand Positioning
+Challenge
+As a new entry into the promotions sector, AMAC required a brand identity that felt youthful and high-energy while maintaining the professional credibility needed to secure bookings with venues and artists.
+Solution
+* Retro Aesthetics: Developed a playful, retro-style logo utilizing bold typography for high impact.
+* Operations Hub: Created a digital home for show promotion, event management, and artist enquiries.
+* Market Positioning: Established AMAC as a fresh, professional partner within the Scottish music circuit.
+Result
+The company quickly carved out a niche, building a reputation for being "big-stage ready" while maintaining strong local connections.
+EventIn.scot
+Services: Logo Design, Web Development, Brand Positioning
+Challenge
+Artists and promoters often face technical barriers when managing digital marketing and event listings. EventIn.scot was conceived as a simplified, musician-first digital support platform.
+Solution
+* Wordmark Design: Created a vibrant, accessible wordmark logo that clearly communicates the brand's digital-first nature.
+* Service Integration: Developed a platform offering subscription-based digital support, including gig poster design and event management add-ons.
+* Portfolio Synergy: Positioned EventIn.scot as the specialized digital agency arm of the MadeAt45 umbrella.
+Result
+The platform provides a clear, professional solution that simplifies digital management for the Scottish music community.
+The Inspiration Hub (Forth Valley RIC)
+Services: Website Development, UX Design, Strategic Brand Identity
+Challenge
+The Forth Valley Regional Improvement Collaborative (RIC)—comprising the local authorities of Stirling, Falkirk, and Clackmannanshire—required a centralized digital hub. The platform needed to facilitate resource sharing, professional learning, and collaboration among educators across the region.
+Solution
+* Resource Centralization: Built a clean, modern website designed for high-volume resource storage and easy navigation.
+* Regional Identity: Developed a brand aesthetic that feels inspiring and educational, reflecting the collaborative nature of the Forth Valley region.
+* User Experience: Focused on a "search-first" layout to ensure educators can find specific curriculum supports and CPD opportunities quickly.
+Result
+A cohesive digital platform that serves as the primary resource for regional educational improvement and professional growth within the Forth Valley network.
+WeAreDigitze
+Services: Brand Strategy, Web Design, SEO Optimization
+Challenge
+The client required a digital-first identity to establish authority in a competitive tech consulting market.
+Solution
+* Developed a sleek, modern brand interface and a conversion-focused landing page.
+Result
+Increased organic traffic and a professionalized digital presence that converted high-value leads.
+Penginere
+Services: Industrial Branding, B2B Web Development
+Challenge
+An engineering firm needed to modernize its traditional image to appeal to international procurement teams.
+Solution
+* Rebranded with high-impact visuals and built a technical resource hub for clients.
+Result
+Successfully expanded market reach into Europe with a robust, professional digital identity.
+Macmath
+Services: Logo Design, Strategic Consulting, Web Support
+Challenge
+The client needed to launch a consultancy brand that felt both heritage-rooted and forward-thinking.
+Solution
+* Created a minimalist wordmark and a streamlined, content-heavy professional website.
+Result
+Rapidly gained traction within the professional services sector as a trusted regional partner.
+HeatPlanScotland
+Services: Web Development, Lead Generation, Brand Positioning
+Challenge
+Required a platform to manage large-scale heating installation enquiries across Scotland.
+Solution
+* Integrated a postcode-validated enquiry system with automated CRM syncing.
+Result
+Significant reduction in manual administration and a 40% increase in lead conversion rates.
+ClacksLife
+Services: Community Branding, Content Strategy, UX Design
+Challenge
+The project aimed to create a lifestyle and community hub for Clackmannanshire with high user engagement.
+Solution
+* Designed a mobile-first directory and event platform with community-led content features.
+Result
+Became the go-to digital destination for local news, events, and business listings.
+AlloaFirst (shop.alloafirst.co.uk)
+Services: E-commerce Development, Multi-Vendor Strategy
+Challenge
+A local Business Improvement District (BID) needed a centralized "digital high street" for multiple retailers.
+Solution
+* Built a custom multi-vendor Shopify platform allowing local shops to sell under one umbrella.
+Result
+Successfully supported local trade by providing small businesses with a professional e-commerce outlet.
+Chromebook Roadshow (chromebookroadshow.scot)
+Services: Campaign Branding, Event Microsite, Digital Strategy
+Challenge
+An educational initiative needed a high-energy brand and registration system for a regional tour.
+Solution
+* Developed a vibrant, mobile-responsive microsite with integrated booking management.
+Result
+Achieved 100% capacity for all roadshow dates through targeted digital promotion.
+GFEscot (Newbattle and Stirling Hubs)
+Services: Hub Identity, UX Design, Educational Resource Management
+Challenge
+Required a digital framework to support the Google for Education hubs at Newbattle and Stirling.
+Solution
+* Standardized the UI across both hubs while maintaining unique regional identity elements.
+Result
+Seamless resource access for hundreds of educators and improved cross-hub collaboration.
+Gartlove Dog Care
+Services: Visual Branding, Booking Integration, Local SEO
+Challenge
+A premium dog care facility needed to move from manual bookings to a digital-first customer experience.
+Solution
+* Launched a warm, trust-building brand and a website with an automated client portal.
+Result
+Fully booked calendar within three months of launch with minimal administrative overhead.
+BossGirls
+Services: Community Branding, Social Media Strategy, Web Hub
+Challenge
+A female entrepreneurship network needed a brand that felt empowering, modern, and inclusive.
+Solution
+* Created a bold, colorful visual identity and a membership directory for networking.
+Result
+Rapid growth in membership and strong engagement across all digital touchpoints.
+GasFit
+Services: Brand Identity, Technical Web Design, Local SEO
+Challenge
+A local trade business needed to professionalize its image to secure larger commercial contracts.
+Solution
+* Developed a "Safety-First" brand narrative and a mobile-optimized service showcase.
+Result
+Successfully tendered for major local government contracts using the new digital portfolio.
+TA Education (taeducation.scot)
+Services: Strategic Rebrand, E-commerce, EdTech Consulting
+Challenge
+A leading EdTech provider needed to unify its service offering and e-commerce shop under one cohesive brand.
+Solution
+* Redesigned the primary brand and launched a Shopify-integrated store for educational tech.
+Result
+Clarified the market position and drove record sales through the new digital storefront.
+
+
+Bonnie Scotland Presents
+Services: Brand Identity, Web Development, Podcasting, Ticketing
+Challenge
+Bonnie Scotland Presents needed to establish a comprehensive digital platform that could support a multi-faceted media presence. They required a unified home for their brand messaging, blog content, podcast series, and event ticketing.
+Solution
+* Integrated Web Hub: Developed a full-brand website incorporating a seamless content management system for blogs and podcasts.
+* Feature Integration: Built a robust, user-friendly ticketing system to handle event bookings directly within the platform.
+* Strategic Messaging: Crafted a cohesive brand narrative to align their diverse content channels.
+Result
+The platform serves as a central media hub, effectively connecting the brand's podcasting and event activities while streamlining ticket sales and content delivery.
+
+
+Very Spexy
+Services: Brand Positioning, E-commerce Development, Local SEO, Sustainability Strategy
+Challenge
+Very Spexy needed to translate the premium, personalized experience of their physical eyewear boutiques in Aberdeen and Peterhead into a digital storefront. They required a platform that could showcase their curated frame inventory while effectively communicating their unique styling services, repair lab, and commitment to sustainability.
+Solution
+* Premium E-commerce Design: Built a sophisticated online store that highlights their designer eyewear and accessories while maintaining the boutique aesthetic.
+* Service Integration: Implemented booking functionality for one-on-one eyewear styling consultations and "Eyewear MOT" services to drive foot traffic.
+* Brand Storytelling: Integrated a dedicated section for their sustainability partnership with Ecologi, emphasizing their commitment to environmental responsibility.
+Result
+Successfully bridged the gap between their brick-and-mortar operations and the digital market, driving consistent online sales and appointments while solidifying their reputation as a premium, eco-conscious optician.
+
+
+Mission Fitness Scotland
+Services: Logo Design, Brand Identity, Web Development
+Challenge
+Mission Fitness Scotland required a distinctive brand identity and a robust digital platform to establish authority in a competitive fitness market. They needed to attract a wide range of members—from beginners to elite athletes—while automating the membership and booking process.
+Solution
+* Dynamic Visuals: Designed a high-energy, motivating logo and a cohesive color palette that reflects the brand's core values of strength and community.
+* Functional Platform: Built a responsive website featuring integrated class scheduling and seamless membership management, reducing administrative friction.
+* Growth Strategy: Focused the site architecture on showcasing training programs and member success stories to build immediate trust and social proof.
+Result
+Successfully launched a recognizable local fitness brand that saw rapid membership growth and streamlined administrative operations through the automated booking system.
+
+
+Club One Fitness
+Services: Full Website Development, Brand Positioning, Advertising Strategy
+Challenge
+Club One Fitness needed a digital transformation to effectively represent its chain of ladies-only gyms. They required a professional, welcoming website that could move beyond placeholder content, integrate class bookings, and support an automated lead generation strategy to grow their membership base across multiple locations (Fife, Forfar, Montrose).
+Solution
+* Brand Alignment: Overhauled the site's visual identity to replace stock imagery with authentic, community-focused content, including a "Meet the Owner" section to build trust.
+* Platform Integration: Integrated TeamUp for seamless class bookings, and developed a fully functional e-commerce shop using WooCommerce and Stripe.
+* Automated Marketing: Implemented a robust email marketing ecosystem, including automated flows for new subscriber welcomes, abandoned cart recovery, and member re-engagement campaigns.
+* Content Strategy: Developed a structured workshop brochure and specialized landing pages (e.g., 6-Week Kickstart Challenge) to provide clear value propositions for prospective members.
+Result
+Successfully modernized the Club One Fitness digital presence, resulting in a streamlined user experience, automated administrative operations, and a scalable framework for driving both new leads and long-term member retention.
+
+
+Dunmar House Hotel
+Services: Website Development, Booking System Integration, SEO, Digital Marketing
+Challenge
+The hotel required a digital transformation to modernize its online image and effectively market its diverse offerings—from luxury rooms to weddings and corporate retreats—while improving visibility for local search.
+Solution
+* Modern Digital Presence: Developed an SEO-optimized website designed to reflect the hotel's blend of traditional charm and modern amenities.
+* System Integration: Implemented a robust booking system to streamline reservations for accommodation and special events.
+* Local Authority: Enhanced local SEO and implemented a strategic digital marketing plan to solidify the hotel's 5-star reputation within the Clackmannanshire area.
+Result
+Successfully established a professional digital storefront that simplifies the customer booking journey and enhances the hotel's competitive standing in the local market.
+
+
+Kyle Falconer (The View)
+Services: Tour Poster Design
+Challenge
+Create a visually impactful set of tour posters for a major Scottish tour that would resonate with fans and maintain brand consistency across multiple dates.
+Solution
+* Designed a comprehensive suite of high-impact tour posters, initially for 15 tour dates, followed by an additional 12-date extension to support the continued success of the tour.
+Result
+Successfully delivered cohesive, high-quality promotional materials for 27 total tour dates, effectively driving audience engagement and ticket awareness across the entire tour circuit.
+Lbulm 
+The Greenporium
+Services: Brand Identity, Packaging Design
+Challenge
+The Greenporium needed a distinct brand identity and physical packaging solution that would stand out in the crowded CBD wellness market while conveying trust, quality, and premium appeal.
+Solution
+* Brand Identity: Developed a sleek, modern brand identity centered on natural ingredients and wellness.
+* Packaging Design: Designed custom, high-quality tin packaging that ensures product freshness while providing a premium tactile experience for the consumer.
+* Design Strategy: Focused on clear, compliant, and visually engaging design elements to build consumer confidence and shelf presence.
+Result
+A fully realized brand identity and packaging suite that successfully positioned The Greenporium as a premium choice in the wellness sector, driving brand recognition and product appeal.
+
+
+Tonto (Band)
+Services: Video Production, Graphic Design
+Challenge
+Tonto needed high-impact promotional assets for their 'Hope Faith and Carnage' project launch to build anticipation and stand out in the music scene.
+Solution
+* Designed a striking launch poster to establish the visual identity for the release.
+* Produced a compelling promotional video to capture the project's energy and drive engagement.
+Result
+Successfully delivered cohesive and visually arresting marketing materials that generated buzz and effectively supported the 'Hope Faith and Carnage' launch campaign.
+
+
+Joe Goodall - 'Suckerpunch'
+Services: Album Art Design
+Challenge
+Joe Goodall needed impactful album artwork for his 'Suckerpunch' release that would capture the tone of the music and stand out on streaming platforms and social media.
+Solution
+* Designed a distinctive and memorable album cover that aligns with the artist's aesthetic and the album's thematic elements.
+* Created accompanying visual assets to ensure consistency across digital release platforms.
+Result
+Successfully delivered a striking visual identity that helped elevate the 'Suckerpunch' launch, resonating with the artist's audience and strengthening his professional brand.
