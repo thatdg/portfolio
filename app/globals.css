@@ -1,26 +1,98 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* ------------------------------------------------------------------ *
+ * Design tokens — bold editorial. Coral is the one loud voice;
+ * everything else stays warm, quiet and disciplined.
+ * ------------------------------------------------------------------ */
+@theme {
+  --color-paper: #f3eee3; /* warm paper base            */
+  --color-paper-2: #eae2d3; /* raised surface            */
+  --color-ink: #17130d; /* warm near-black text / bg     */
+  --color-ink-soft: #3a332a; /* secondary on paper        */
+  --color-stone: #837a6a; /* muted labels / captions      */
+  --color-sand: #ded4c1; /* hairlines, dividers          */
+  --color-coral: #ff4e2e; /* THE accent                  */
+  --color-coral-deep: #e2381a; /* pressed / hover        */
 }
 
+/* Font tokens map to the next/font CSS variables set on <html>. */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-fraunces);
+  --font-grotesk: var(--font-space-grotesk);
+  --font-body: var(--font-inter);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ------------------------------------------------------------------ *
+ * Base
+ * ------------------------------------------------------------------ */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: var(--color-coral);
+    color: var(--color-paper);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-coral);
+    outline-offset: 3px;
+  }
+
+  /* Fraunces looks best with tight optical settings at display sizes. */
+  .font-display {
+    font-optical-sizing: auto;
+    letter-spacing: -0.02em;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ------------------------------------------------------------------ *
+ * Signature motion — one orchestrated entrance, then stillness.
+ * Everything degrades to fully-visible under reduced-motion.
+ * ------------------------------------------------------------------ */
+@layer utilities {
+  .reveal {
+    opacity: 0;
+    transform: translateY(1.75rem);
+    transition:
+      opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+      transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+    transition-delay: var(--reveal-delay, 0ms);
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Hero load-in: rise words on first paint. */
+  .rise {
+    opacity: 0;
+    transform: translateY(0.9em);
+    animation: rise 0.9s cubic-bezier(0.2, 0.75, 0.15, 1) forwards;
+    animation-delay: var(--rise-delay, 0ms);
+  }
+  @keyframes rise {
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .rise {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
 }
