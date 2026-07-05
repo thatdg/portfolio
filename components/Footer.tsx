@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Container } from "./Container";
 import { CONTACT } from "@/content/site";
+import { DownloadIcon } from "./icons";
 
 export function Footer() {
   return (
@@ -33,8 +34,15 @@ export function Footer() {
               {s.label}
             </a>
           ))}
-          <a href={CONTACT.cvUrl} download className="hover:text-accent">
+          <a
+            href={CONTACT.cvUrl}
+            download
+            title="Download CV (PDF)"
+            className="group inline-flex items-center gap-1.5 hover:text-accent"
+          >
+            <DownloadIcon className="transition-transform group-hover:translate-y-0.5" />
             CV
+            <span className="text-[0.62rem] tracking-[0.12em] opacity-55">PDF</span>
           </a>
           <span className="text-stone">© {CONTACT.year}</span>
         </div>

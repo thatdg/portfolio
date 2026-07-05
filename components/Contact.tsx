@@ -1,6 +1,7 @@
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
 import { CONTACT } from "@/content/site";
+import { DownloadIcon } from "./icons";
 
 export function Contact() {
   return (
@@ -37,9 +38,12 @@ export function Contact() {
             <a
               href={CONTACT.cvUrl}
               download
-              className="rounded-full bg-paper px-6 py-3 font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-ink transition-colors hover:bg-ink hover:text-paper"
+              title="Download CV (PDF)"
+              className="group inline-flex items-center gap-2 rounded-full bg-paper px-6 py-3 font-grotesk text-[0.8rem] uppercase tracking-[0.14em] text-ink transition-colors hover:bg-ink hover:text-paper"
             >
+              <DownloadIcon className="transition-transform group-hover:translate-y-0.5" />
               Download CV
+              <span className="text-[0.62rem] tracking-[0.12em] opacity-55">PDF</span>
             </a>
             <div className="flex flex-wrap gap-x-8 gap-y-3 font-grotesk text-[0.82rem] uppercase tracking-[0.14em]">
               {CONTACT.socials.map((s) => (
