@@ -29,9 +29,6 @@ export function Contact() {
               </a>
             </div>
             <div className="flex flex-wrap gap-x-10 gap-y-2 font-grotesk text-[0.82rem] uppercase tracking-[0.14em]">
-              <a href={`tel:${CONTACT.phoneHref}`} className="hover:underline">
-                {CONTACT.phone}
-              </a>
               <span className="text-paper/70">{CONTACT.location}</span>
             </div>
           </div>

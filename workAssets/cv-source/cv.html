@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Tony Syme — CV</title>
+<style>
+  @font-face{font-family:'Fraunces';src:url('fonts/fraunces600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block;}
+  @font-face{font-family:'Fraunces';src:url('fonts/fraunces400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+  @font-face{font-family:'Grotesk';src:url('fonts/grotesk500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block;}
+  @font-face{font-family:'Grotesk';src:url('fonts/grotesk600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block;}
+  @font-face{font-family:'Inter';src:url('fonts/inter400.woff2') format('woff2');font-weight:400;font-style:normal;font-display:block;}
+  @font-face{font-family:'Inter';src:url('fonts/inter500.woff2') format('woff2');font-weight:500;font-style:normal;font-display:block;}
+  @font-face{font-family:'Inter';src:url('fonts/inter600.woff2') format('woff2');font-weight:600;font-style:normal;font-display:block;}
+
+  :root{
+    --paper:#f7f2e9; --ink:#181309; --soft:#3f382d; --stone:#8c8274;
+    --accent:#2348e0; --sand:#e2d7c4; --panel:#efe7d7;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  @page{ size:A4; margin:0; }
+  html,body{ background:var(--paper); color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif; -webkit-print-color-adjust:exact; print-color-adjust:exact; }
+  .page{ width:210mm; min-height:297mm; padding:11mm 15mm 9mm; margin:0 auto;
+    position:relative; background:var(--paper); }
+
+  .eyebrow{ font-family:'Grotesk'; font-weight:600; font-size:8.2px; letter-spacing:.2em;
+    text-transform:uppercase; color:var(--accent); }
+
+  /* ---------- header ---------- */
+  header{ display:flex; justify-content:space-between; align-items:flex-end;
+    border-bottom:2px solid var(--ink); padding-bottom:11px; }
+  .name{ font-family:'Fraunces'; font-weight:600; font-size:42px; line-height:.92; letter-spacing:-.5px; }
+  .name .dot{ color:var(--accent); }
+  .role{ font-family:'Grotesk'; font-weight:600; font-size:11px; letter-spacing:.18em;
+    text-transform:uppercase; color:var(--accent); margin-top:9px; }
+  .avail{ font-family:'Grotesk'; font-weight:500; font-size:8.5px; letter-spacing:.14em;
+    text-transform:uppercase; color:var(--soft); margin-top:6px; }
+  .avail .dot2{ color:var(--accent); }
+  .contact{ font-family:'Grotesk'; font-weight:500; font-size:9px; line-height:1.7;
+    color:var(--soft); text-align:right; }
+  .contact .sep{ color:var(--accent); padding:0 5px; }
+  .contact a{ color:var(--soft); text-decoration:none; }
+
+  /* ---------- metrics ---------- */
+  .metrics{ display:grid; grid-template-columns:repeat(4,1fr); gap:0;
+    border-bottom:1px solid var(--sand); margin-top:11px; padding-bottom:10px; }
+  .metric{ padding-right:12px; }
+  .metric .n{ font-family:'Fraunces'; font-weight:600; font-size:25px; color:var(--accent); line-height:1; }
+  .metric .l{ font-family:'Grotesk'; font-weight:500; font-size:8px; letter-spacing:.11em;
+    text-transform:uppercase; color:var(--stone); margin-top:5px; }
+
+  /* ---------- profile ---------- */
+  .profile{ margin-top:10px; }
+  .profile p{ font-size:10.2px; line-height:1.5; color:var(--soft); max-width:64em; }
+  .profile b{ color:var(--ink); font-weight:600; }
+
+  /* ---------- section ---------- */
+  .sec{ display:flex; align-items:center; gap:9px; margin:12px 0 8px; }
+  .sec h2{ font-family:'Grotesk'; font-weight:600; font-size:10px; letter-spacing:.16em;
+    text-transform:uppercase; color:var(--ink); white-space:nowrap; }
+  .sec .rule{ height:1.5px; background:var(--accent); flex:1; }
+
+  /* ---------- experience ---------- */
+  .exp{ margin-bottom:7px; break-inside:avoid; }
+  .exp-head{ display:flex; justify-content:space-between; align-items:baseline; gap:12px; }
+  .exp-title{ font-size:11.5px; }
+  .exp-title .r{ font-family:'Inter'; font-weight:600; color:var(--ink); }
+  .exp-title .o{ font-family:'Grotesk'; font-weight:600; color:var(--accent); }
+  .period{ font-family:'Grotesk'; font-weight:500; font-size:8.5px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--stone); white-space:nowrap; }
+  .exp .sum{ font-family:'Fraunces'; font-weight:400; font-style:italic; font-size:10px;
+    color:var(--soft); margin:2px 0 3px; }
+  .exp ul{ list-style:none; }
+  .exp li{ position:relative; padding-left:14px; font-size:9.8px; line-height:1.4;
+    color:var(--soft); margin-bottom:1.5px; }
+  .exp li::before{ content:""; position:absolute; left:0; top:5px; width:5px; height:5px;
+    background:var(--accent); border-radius:1px; transform:rotate(45deg); }
+  .exp li b{ color:var(--ink); font-weight:600; }
+
+  /* ---------- capabilities grid ---------- */
+  .grid2{ display:grid; grid-template-columns:1fr 1fr; gap:8px 24px; break-inside:avoid; }
+  .cap{ margin-bottom:5px; }
+  .cap h3{ font-family:'Grotesk'; font-weight:600; font-size:9px; letter-spacing:.08em;
+    text-transform:uppercase; color:var(--ink); margin-bottom:3px; }
+  .cap p{ font-size:9.3px; line-height:1.42; color:var(--soft); }
+  .chips{ display:flex; flex-wrap:wrap; gap:4px; }
+  .chip{ font-family:'Grotesk'; font-weight:500; font-size:8.3px; letter-spacing:.04em;
+    color:var(--soft); border:1px solid var(--sand); border-radius:20px; padding:2.5px 8px; background:#fff9ef; }
+  .edu{ list-style:none; }
+  .edu li{ position:relative; padding-left:12px; font-size:9.3px; line-height:1.36;
+    color:var(--soft); margin-bottom:1.5px; }
+  .edu li::before{ content:""; position:absolute; left:0; top:5px; width:4px; height:4px;
+    background:var(--accent); border-radius:50%; }
+  .edu li b{ color:var(--ink); font-weight:600; }
+
+  .foot{ position:absolute; left:15mm; right:15mm; bottom:8mm; padding-top:8px;
+    border-top:1px solid var(--sand);
+    font-family:'Grotesk'; font-weight:500; font-size:8px; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--stone); display:flex; justify-content:space-between; }
+</style>
+</head>
+<body>
+
+<!-- ============ PAGE 1 ============ -->
+<section class="page">
+  <header>
+    <div>
+      <div class="name">Tony Syme<span class="dot">.</span></div>
+      <div class="role">B2B Marketing Manager</div>
+      <div class="avail"><span class="dot2">&#9679;</span>&nbsp; Available for an immediate start</div>
+    </div>
+    <div class="contact">
+      <a href="mailto:tonysyme.ts2@gmail.com">tonysyme.ts2@gmail.com</a><br>
+      <a href="https://www.linkedin.com/in/anthony-syme-5043651a8/">linkedin.com/in/anthony-syme-5043651a8</a><br>
+      Stirling / Glasgow, Scotland<span class="sep">·</span>UK Citizen<span class="sep">·</span>Portfolio on request
+    </div>
+  </header>
+
+  <div class="metrics">
+    <div class="metric"><div class="n">+249%</div><div class="l">Turnover growth</div></div>
+    <div class="metric"><div class="n">+40%</div><div class="l">Lead conversion</div></div>
+    <div class="metric"><div class="n">100%</div><div class="l">Event capacity</div></div>
+    <div class="metric"><div class="n">88+</div><div class="l">Workshops delivered</div></div>
+  </div>
+
+  <div class="profile">
+    <p>Commercially minded <b>B2B Marketing Manager</b> with 5+ years turning brand, web, and
+    campaigns into measurable growth for distribution, trade, and live-events businesses across
+    Scotland. I lead end-to-end — <b>positioning and strategy</b>, the multi-channel campaigns
+    that carry it, the identity it lives in, and the <b>websites and funnels</b> where it
+    converts. Having co-founded and scaled my own ventures, I stay focused on the numbers a
+    brand actually needs to move, and on marketing that pays for itself.</p>
+  </div>
+
+  <div class="sec"><h2>Experience</h2><div class="rule"></div></div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <div class="exp-title"><span class="r">Co-Founder &amp; Marketing Lead</span> &nbsp;<span class="o">AMAC Events</span></div>
+      <div class="period">Nov 2024 – Mar 2026</div>
+    </div>
+    <div class="sum">Stood up the marketing function for a fast-paced live-events venture from scratch.</div>
+    <ul>
+      <li>Delivered a <b>profitable first year of trading</b> through targeted, cross-channel B2B campaigns.</li>
+      <li>Designed campaign creative and <b>high-converting ticket landing pages</b> with consistent platform uptime.</li>
+      <li>Partnered directly with corporate venues, suppliers, and promoters to secure and deliver events.</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <div class="exp-title"><span class="r">Co-Founder &amp; Creative / Marketing Lead</span> &nbsp;<span class="o">The Attic Club</span></div>
+      <div class="period">2023 – 2026</div>
+    </div>
+    <div class="sum">Owned brand, creative direction, and promotion for a live-music venue.</div>
+    <ul>
+      <li>Grew annual turnover <b>~3.5× (+249%)</b> through brand, promotion, and multi-channel campaigns.</li>
+      <li>Ran B2B communications, supplier workflows, invoicing, and ticketing operations.</li>
+      <li>Recruited, onboarded, and led permanent and temporary teams across live sites.</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <div class="exp-title"><span class="r">Founder &amp; B2B Digital Consultant</span> &nbsp;<span class="o">That Digital Guy</span></div>
+      <div class="period">May 2023 – Mar 2026</div>
+    </div>
+    <div class="sum">Web, e-commerce, and demand generation for independent retailers and corporate clients.</div>
+    <ul>
+      <li>Built custom WordPress / WooCommerce and Shopify sites and marketing funnels end-to-end — <b>profitable in year one</b>.</li>
+      <li>Engineered SEO frameworks and ran Meta Ads campaigns that lifted <b>organic visibility and high-value trade enquiries</b>.</li>
+      <li>Ran centralised CRM and high-volume comms to safeguard data accuracy and deadlines.</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <div class="exp-title"><span class="r">Technical Trainer &amp; Web Delivery Specialist</span> &nbsp;<span class="o">Tablet Academy Scotland</span></div>
+      <div class="period">Oct 2021 – Mar 2024</div>
+    </div>
+    <div class="sum">Digital-deployment programmes for enterprise partners including Google and Microsoft.</div>
+    <ul>
+      <li>Coordinated and delivered <b>88+ technical workshops</b> across Scotland for corporate stakeholders.</li>
+      <li>Translated complex documentation into actionable toolkits and onboarding journeys.</li>
+      <li>Managed programme logistics and multi-site communications under tight timelines.</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <div class="exp-title"><span class="r">Digital Marketer &amp; Admin Assistant</span> &nbsp;<span class="o">Stewart Accounting Services</span></div>
+      <div class="period">Mar 2020 – May 2022</div>
+    </div>
+    <div class="sum">Owned the digital footprint for a chartered accountancy firm.</div>
+    <ul>
+      <li>Grew B2B presence through targeted marketing and landing-page optimisation.</li>
+      <li>Integrated internal admin systems to streamline client onboarding.</li>
+    </ul>
+  </div>
+
+  <div class="exp">
+    <div class="exp-head">
+      <div class="exp-title"><span class="r">Project Support — Salesforce Migration</span> &nbsp;<span class="o">Blue Arrow</span></div>
+      <div class="period">2025</div>
+    </div>
+    <ul>
+      <li>Supported a large-scale <b>Salesforce CRM migration</b> during a national transition, ensuring record consistency across cross-functional teams.</li>
+    </ul>
+  </div>
+
+  <div class="sec"><h2>Capabilities</h2><div class="rule"></div></div>
+  <div class="grid2">
+    <div>
+      <div class="cap"><h3>B2B Campaign Strategy &amp; Execution</h3>
+        <p>Trade customer acquisition · multi-channel promotional campaigns · marketing automation &amp; email · lead generation · commercial performance tracking.</p></div>
+      <div class="cap"><h3>Digital Design &amp; Print</h3>
+        <p>Brand identity systems · B2B brochures &amp; product catalogues · promotional graphics · high-quality digital artwork.</p></div>
+    </div>
+    <div>
+      <div class="cap"><h3>Web &amp; SEO</h3>
+        <p>WordPress / WooCommerce &amp; Shopify · third-party API integration · technical SEO audits · landing-page optimisation &amp; CRO.</p></div>
+      <div class="cap"><h3>Stakeholder &amp; Event Coordination</h3>
+        <p>Supplier &amp; contractor liaison · trade-event &amp; showroom logistics · cross-functional team leadership · budget tracking.</p></div>
+    </div>
+  </div>
+
+  <div class="sec"><h2>Toolkit</h2><div class="rule"></div></div>
+  <div class="chips">
+    <span class="chip">Adobe InDesign</span><span class="chip">Photoshop</span><span class="chip">Canva</span>
+    <span class="chip">WordPress</span><span class="chip">WooCommerce</span><span class="chip">Shopify</span>
+    <span class="chip">Wix</span><span class="chip">Mailchimp</span><span class="chip">Meta Ads Manager</span>
+    <span class="chip">Salesforce CRM</span><span class="chip">Stripe</span><span class="chip">Square POS</span>
+    <span class="chip">Google Workspace</span><span class="chip">Microsoft Office</span>
+  </div>
+
+  <div class="grid2" style="margin-top:6px;">
+    <div>
+      <div class="sec"><h2>Education &amp; Certifications</h2><div class="rule"></div></div>
+      <ul class="edu">
+        <li><b>Modern Apprenticeship in Digital Marketing</b> — SCQF 6 / SVQ 3 (2021)</li>
+        <li>Accredited Diploma in Internet Marketing</li>
+        <li>Facebook Ad Accelerator Certification</li>
+        <li>LinkedIn Marketing Masterclass</li>
+        <li>Entrepreneurs Marketing System Certification</li>
+      </ul>
+    </div>
+    <div>
+      <div class="sec"><h2>Volunteering &amp; Interests</h2><div class="rule"></div></div>
+      <ul class="edu">
+        <li><b>Saltire Volunteer Awards</b> — 500+ community volunteer hours completed.</li>
+        <li>Interests: digital photography, creative tooling, and emerging AI technologies.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="foot"><span>Tony Syme — B2B Marketing Manager</span><span>References &amp; portfolio available on request</span></div>
+</section>
+
+</body>
+</html>

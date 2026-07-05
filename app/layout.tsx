@@ -33,7 +33,20 @@ export const metadata: Metadata = {
     template: "%s — Tony Syme",
   },
   description:
-    "Commercially minded B2B marketing manager turning brand, web, and campaigns into measurable growth for trade, distribution, and live-events businesses across Scotland.",
+    "B2B marketing manager, available now for an immediate start. Brand, web, and campaigns that drove +249% turnover growth and +40% lead conversion for trade, distribution, and live-events businesses across Scotland.",
+  openGraph: {
+    title: "Tony Syme — B2B Marketing Manager",
+    description:
+      "Marketing that moves the numbers: +249% turnover growth, +40% lead conversion. Available now for an immediate start.",
+    type: "website",
+    locale: "en_GB",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tony Syme — B2B Marketing Manager",
+    description:
+      "Marketing that moves the numbers: +249% turnover growth, +40% lead conversion. Available now.",
+  },
 };
 
 export default function RootLayout({

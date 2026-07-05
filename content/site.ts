@@ -7,10 +7,8 @@ export const CONTACT = {
   firstName: "Tony",
   role: "B2B Marketing Manager",
   email: "tonysyme.ts2@gmail.com",
-  phone: "07886 759197",
-  phoneHref: "+447886759197",
   location: "Stirling / Glasgow, Scotland",
-  availability: "Open to B2B marketing manager roles",
+  availability: "Available now — immediate start",
   /** Drop tony-syme-cv.pdf into /public to enable the download button. */
   cvUrl: "/tony-syme-cv.pdf",
   year: 2026,

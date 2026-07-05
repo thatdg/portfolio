@@ -63,6 +63,7 @@ export const projects: Project[] = [
       "Branding and a booking-ready site that grew a small-town music venue by roughly 3.5×.",
     headlineMetric: { value: "+249%", label: "annual turnover growth" },
     accent: "#3a2d5c",
+    coverImage: "/work/the-attic/cover.png",
     tags: ["Brand identity", "Web development", "Ticketing", "Promotion"],
     role: ["Creative direction", "Brand identity", "Web build"],
     challenge:
@@ -75,9 +76,9 @@ export const projects: Project[] = [
       { value: "City acts", label: "in a small town" },
     ],
     gallery: [
-      { caption: "Logo & brand identity" },
-      { caption: "Event listings CMS" },
-      { caption: "Gig promotion" },
+      { caption: "Live-music homepage", src: "/work/the-attic/g1.png" },
+      { caption: "What's on & ticketing", src: "/work/the-attic/g2.png" },
+      { caption: "Find the venue", src: "/work/the-attic/g3.png" },
     ],
   },
   {
@@ -103,9 +104,9 @@ export const projects: Project[] = [
       { value: "Less", label: "manual admin" },
     ],
     gallery: [
-      { caption: "Enquiry flow" },
-      { caption: "Postcode validation" },
-      { caption: "CRM integration" },
+      { caption: "Service & care plans", src: "/work/heatplan-scotland/g1.png" },
+      { caption: "Boiler installation", src: "/work/heatplan-scotland/g2.png" },
+      { caption: "Services", src: "/work/heatplan-scotland/g3.png" },
     ],
   },
   {
@@ -118,6 +119,7 @@ export const projects: Project[] = [
       "A high-energy microsite and campaign that booked every date of a regional tour to capacity.",
     headlineMetric: { value: "100%", label: "capacity, all dates" },
     accent: "#1b4fa0",
+    coverImage: "/work/chromebook-roadshow/cover.png",
     tags: ["Campaign branding", "Event microsite", "Booking", "Digital strategy"],
     role: ["Campaign branding", "Microsite build"],
     challenge:
@@ -130,9 +132,9 @@ export const projects: Project[] = [
       { value: "Mobile-first", label: "registration" },
     ],
     gallery: [
-      { caption: "Campaign identity" },
-      { caption: "Booking microsite" },
-      { caption: "Event promotion" },
+      { caption: "On tour across Scotland", src: "/work/chromebook-roadshow/g1.png" },
+      { caption: "Educator training sessions", src: "/work/chromebook-roadshow/g2.png" },
+      { caption: "Chromebook demos", src: "/work/chromebook-roadshow/g3.png" },
     ],
   },
   {
@@ -145,6 +147,7 @@ export const projects: Project[] = [
       "A cohesive tour-poster suite across 27 dates for one of Scotland's best-known frontmen.",
     headlineMetric: { value: "27", label: "tour dates" },
     accent: "#5c1f46",
+    coverImage: "/work/kyle-falconer/cover.png",
     tags: ["Poster design", "Tour campaign", "Art direction"],
     role: ["Poster design", "Art direction"],
     challenge:
@@ -157,9 +160,9 @@ export const projects: Project[] = [
       { value: "Ticket", label: "awareness driven" },
     ],
     gallery: [
-      { caption: "Tour poster series" },
-      { caption: "15-date launch" },
-      { caption: "12-date extension" },
+      { caption: "Live-in-store poster", src: "/work/kyle-falconer/g1.png" },
+      { caption: "Signing & tour dates", src: "/work/kyle-falconer/g2.png" },
+      { caption: "Tour key art", src: "/work/kyle-falconer/g3.png" },
     ],
   },
   {
@@ -185,9 +188,9 @@ export const projects: Project[] = [
       { value: "Bookings", label: "+ shop live" },
     ],
     gallery: [
-      { caption: "Multi-site homepage" },
-      { caption: "Class booking (TeamUp)" },
-      { caption: "Shop (WooCommerce)" },
+      { caption: "Classes & timetable", src: "/work/club-one-fitness/g1.png" },
+      { caption: "Shop (WooCommerce)", src: "/work/club-one-fitness/g2.png" },
+      { caption: "Membership", src: "/work/club-one-fitness/g3.png" },
     ],
   },
   {
@@ -200,6 +203,7 @@ export const projects: Project[] = [
       "A memorable mascot brand and an instant-quote tool that launched a heating firm from a standing start.",
     headlineMetric: { value: "Standing start", label: "to local challenger" },
     accent: "#1e5a8a",
+    coverImage: "/work/heatmasters/cover.png",
     tags: ["Logo design", "Web development", "Lead generation", "Brand positioning"],
     role: ["Brand identity", "Web build"],
     challenge:
@@ -212,9 +216,9 @@ export const projects: Project[] = [
       { value: "Local", label: "challenger presence" },
     ],
     gallery: [
-      { caption: "Polar Bear logo" },
-      { caption: "Instant boiler-quote tool" },
-      { caption: "Homepage" },
+      { caption: "Homepage", src: "/work/heatmasters/g1.png" },
+      { caption: "Instant boiler quote", src: "/work/heatmasters/g2.png" },
+      { caption: "Service locations", src: "/work/heatmasters/g3.png" },
     ],
   },
   {
@@ -227,6 +231,7 @@ export const projects: Project[] = [
       "A youthful, high-energy promoter brand and operations hub for the Scottish music circuit.",
     headlineMetric: { value: "Debut year", label: "profitable" },
     accent: "#6b4a10",
+    coverImage: "/work/amac-promotions/cover.png",
     tags: ["Brand identity", "Web development", "Event promotion", "Ticketing"],
     role: ["Brand identity", "Campaign design", "Web build"],
     challenge:
@@ -239,9 +244,9 @@ export const projects: Project[] = [
       { value: "Venue", label: "partnerships" },
     ],
     gallery: [
-      { caption: "Retro logo" },
-      { caption: "Promotion hub" },
-      { caption: "Event campaigns" },
+      { caption: "Primary logo", src: "/work/amac-promotions/g1.png" },
+      { caption: "Reversed on ink", src: "/work/amac-promotions/g2.png" },
+      { caption: "Brand palette", src: "/work/amac-promotions/g3.png" },
     ],
   },
   {
@@ -267,36 +272,9 @@ export const projects: Project[] = [
       { value: "Eco", label: "story built in" },
     ],
     gallery: [
-      { caption: "Storefront" },
-      { caption: "Styling bookings" },
-      { caption: "Sustainability section" },
-    ],
-  },
-  {
-    slug: "inspiration-hub",
-    title: "The Inspiration Hub",
-    client: "Forth Valley RIC",
-    category: "Web",
-    year: 2023,
-    summary:
-      "A search-first resource hub uniting three local authorities' educators on one platform.",
-    headlineMetric: { value: "3 authorities", label: "one hub" },
-    accent: "#2b3a6b",
-    tags: ["Website development", "UX design", "Brand identity"],
-    role: ["UX design", "Web build", "Brand"],
-    challenge:
-      "The Forth Valley Regional Improvement Collaborative — Stirling, Falkirk and Clackmannanshire — needed a centralised hub for resource sharing, professional learning, and collaboration across the region.",
-    solution:
-      "A clean, high-volume resource platform with a search-first layout so educators find curriculum supports and CPD quickly, wrapped in an inspiring regional identity.",
-    results: [
-      { value: "3 authorities", label: "on one hub" },
-      { value: "Search-first", label: "resource access" },
-      { value: "Regional", label: "collaboration" },
-    ],
-    gallery: [
-      { caption: "Resource hub" },
-      { caption: "Search-first UX" },
-      { caption: "Regional identity" },
+      { caption: "Frames & collections", src: "/work/very-spexy/g1.png" },
+      { caption: "The boutique story", src: "/work/very-spexy/g2.png" },
+      { caption: "Visit & services", src: "/work/very-spexy/g3.png" },
     ],
   },
   {
@@ -322,9 +300,9 @@ export const projects: Project[] = [
       { value: "Ticketing", label: "built in" },
     ],
     gallery: [
-      { caption: "Brand & site" },
-      { caption: "Podcast hub" },
-      { caption: "Ticketing" },
+      { caption: "Podcast hub", src: "/work/bonnie-scotland-presents/g1.png" },
+      { caption: "Reviews & the music blog", src: "/work/bonnie-scotland-presents/g2.png" },
+      { caption: "The story", src: "/work/bonnie-scotland-presents/g3.png" },
     ],
   },
   {
@@ -337,6 +315,7 @@ export const projects: Project[] = [
       "A premium brand identity and custom tin packaging for a CBD wellness range.",
     headlineMetric: { value: "Shelf-ready", label: "brand + packaging" },
     accent: "#3f4a1e",
+    coverImage: "/work/the-greenporium/cover.png",
     tags: ["Brand identity", "Packaging design"],
     role: ["Brand identity", "Packaging design"],
     challenge:
@@ -349,36 +328,37 @@ export const projects: Project[] = [
       { value: "Compliant", label: "+ distinctive" },
     ],
     gallery: [
-      { caption: "Brand identity" },
-      { caption: "Tin packaging" },
-      { caption: "Product range" },
+      { caption: "Product label design", src: "/work/the-greenporium/g1.png" },
+      { caption: "Pattern range", src: "/work/the-greenporium/g2.png" },
+      { caption: "Shelf-ready tin", src: "/work/the-greenporium/g3.png" },
     ],
   },
   {
-    slug: "alloafirst",
-    title: "AlloaFirst",
-    client: "AlloaFirst BID",
-    category: "Web",
-    year: 2022,
+    slug: "suckerpunch",
+    title: "Suckerpunch",
+    client: "Joe Goodall",
+    category: "Creative",
+    year: 2024,
     summary:
-      "A multi-vendor 'digital high street' letting local shops sell under one roof.",
-    headlineMetric: { value: "Multi-vendor", label: "digital high street" },
-    accent: "#26333f",
-    tags: ["E-commerce", "Multi-vendor", "Local trade"],
-    role: ["E-commerce build", "Multi-vendor strategy"],
+      "Album artwork for Joe Goodall's 'Suckerpunch' — a striking cover built to stand out across streaming and social.",
+    headlineMetric: { value: "Streaming-ready", label: "cover artwork" },
+    accent: "#8f2d24",
+    coverImage: "/work/suckerpunch/cover.png",
+    tags: ["Album art", "Illustration", "Art direction"],
+    role: ["Album artwork", "Art direction"],
     challenge:
-      "A Business Improvement District needed a centralised online 'high street' so multiple local retailers could sell under one umbrella.",
+      "Joe Goodall needed impactful album artwork for his 'Suckerpunch' release that captured the tone of the music and stood out on streaming platforms and social.",
     solution:
-      "A custom multi-vendor Shopify platform giving small local shops a professional e-commerce outlet without each having to build their own.",
+      "A distinctive, memorable cover aligned with the artist's aesthetic and the record's themes — an anatomical heart in electric blue against a raw red field — extended into matching assets so the identity stayed consistent across every release platform.",
     results: [
-      { value: "Multi-vendor", label: "marketplace" },
-      { value: "Local shops", label: "online" },
-      { value: "One", label: "digital high street" },
+      { value: "Striking", label: "visual identity" },
+      { value: "Streaming", label: "+ social ready" },
+      { value: "Audience", label: "resonance" },
     ],
     gallery: [
-      { caption: "Marketplace" },
-      { caption: "Vendor storefronts" },
-      { caption: "Checkout" },
+      { caption: "Album cover", src: "/work/suckerpunch/g1.png" },
+      { caption: "Cover illustration", src: "/work/suckerpunch/g2.png" },
+      { caption: "Release wordmark", src: "/work/suckerpunch/g3.png" },
     ],
   },
 ];

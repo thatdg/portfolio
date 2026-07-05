@@ -22,9 +22,6 @@ export function Footer() {
           <a href={`mailto:${CONTACT.email}`} className="hover:text-accent">
             Email
           </a>
-          <a href={`tel:${CONTACT.phoneHref}`} className="hover:text-accent">
-            {CONTACT.phone}
-          </a>
           {CONTACT.socials.map((s) => (
             <a
               key={s.label}
