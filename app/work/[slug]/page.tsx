@@ -115,7 +115,7 @@ export default async function CaseStudyPage({
             <dl className="mt-10 grid gap-y-12 sm:grid-cols-3 sm:gap-x-8">
               {project.results.map((m) => (
                 <div key={m.label}>
-                  <dt className="font-display text-6xl font-semibold text-accent md:text-7xl">
+                  <dt className="font-display text-6xl font-semibold text-gradient md:text-7xl">
                     {m.value}
                   </dt>
                   <dd className="mt-2 max-w-[16ch] font-grotesk text-sm uppercase tracking-[0.12em] text-ink-soft">

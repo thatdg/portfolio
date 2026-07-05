@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Fraunces, Space_Grotesk, Inter } from "next/font/google";
+import { Newsreader, Space_Grotesk, Inter } from "next/font/google";
 import "./globals.css";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 
-// Display: editorial serif with real personality (soft + wonk axes).
-const fraunces = Fraunces({
+// Display: a warm editorial serif built for reading — bold presence, easy to
+// read at large sizes, with a real italic for the gradient headline words.
+const newsreader = Newsreader({
   subsets: ["latin"],
-  variable: "--font-fraunces",
-  axes: ["opsz", "SOFT", "WONK"],
+  variable: "--font-newsreader",
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -27,7 +27,16 @@ const inter = Inter({
   display: "swap",
 });
 
+// Base URL for resolving OG / Twitter image paths. Set NEXT_PUBLIC_SITE_URL in
+// production; Vercel exposes VERCEL_URL automatically; falls back to localhost.
+const siteUrl =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL
+    ? `https://${process.env.VERCEL_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: "Tony Syme — B2B Marketing Manager",
     template: "%s — Tony Syme",
@@ -57,7 +66,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fraunces.variable} ${spaceGrotesk.variable} ${inter.variable} h-full`}
+      className={`${newsreader.variable} ${spaceGrotesk.variable} ${inter.variable} h-full`}
     >
       <body
         className="min-h-full flex flex-col bg-paper text-ink"

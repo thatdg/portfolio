@@ -20,13 +20,13 @@ export function ProofStats() {
         const { prefix, value, suffix } = parseStat(p.value);
         return (
           <div key={p.label} className="flex flex-col">
-            <dt className="font-display text-3xl font-semibold text-accent md:text-4xl">
+            <dt className="font-display text-3xl font-semibold text-gradient md:text-4xl">
               {value === null ? (
                 p.value
               ) : (
                 <>
                   {prefix}
-                  <NumberTicker value={value} />
+                  <NumberTicker value={value} className="text-gradient" />
                   {suffix}
                 </>
               )}

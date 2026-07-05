@@ -24,7 +24,7 @@ export default function WorkPage() {
           <h1 className="mt-6 max-w-4xl font-display text-5xl font-semibold leading-[0.95] tracking-tight md:text-8xl">
             Work that
             <br />
-            earned its <em className="italic text-accent">keep.</em>
+            earned its <em className="italic text-gradient">keep.</em>
           </h1>
           <p className="mt-8 max-w-xl text-lg leading-relaxed text-ink-soft">
             Web, brand, campaigns, and creative — for trade, live events,

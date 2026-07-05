@@ -5,7 +5,7 @@ import { DownloadIcon } from "./icons";
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-20 bg-accent text-paper">
+    <section id="contact" className="scroll-mt-20 bg-gradient-cool text-paper">
       <Container className="py-20 md:py-32">
         <Reveal>
           <p className="font-grotesk text-[0.8rem] uppercase tracking-[0.2em] text-paper/70">

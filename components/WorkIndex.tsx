@@ -75,7 +75,7 @@ export function WorkIndex({
 
                   {/* headline metric */}
                   <div className="md:text-right">
-                    <div className="font-display text-3xl font-semibold text-accent md:text-4xl">
+                    <div className="font-display text-3xl font-semibold text-gradient md:text-4xl">
                       {p.headlineMetric.value}
                     </div>
                     <div className="font-grotesk text-[0.7rem] uppercase tracking-[0.14em] text-stone">

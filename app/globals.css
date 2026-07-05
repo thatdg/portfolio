@@ -17,7 +17,7 @@
 
 /* Font tokens map to the next/font CSS variables set on <html>. */
 @theme inline {
-  --font-display: var(--font-fraunces);
+  --font-display: var(--font-newsreader);
   --font-grotesk: var(--font-space-grotesk);
   --font-body: var(--font-inter);
 }
@@ -84,7 +84,7 @@
     outline-offset: 3px;
   }
 
-  /* Fraunces looks best with tight optical settings at display sizes. */
+  /* Newsreader: auto optical sizing + a touch tighter at display sizes. */
   .font-display {
     font-optical-sizing: auto;
     letter-spacing: -0.02em;
@@ -124,6 +124,44 @@
   }
 }
 
+/* ------------------------------------------------------------------ *
+ * Cool-blue gradient — the accent "blue" as a Magic UI animated gradient.
+ * Anchored to the cobalt at both ends so the remaining solid accents
+ * (dots, hairlines, borders) still read as the same family.
+ * ------------------------------------------------------------------ */
+@keyframes gradient {
+  to {
+    background-position: 200% center;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background-image: linear-gradient(
+      to right,
+      #2348e0,
+      #3b82f6,
+      #22d3ee,
+      #3b82f6,
+      #2348e0
+    );
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 6s linear infinite;
+  }
+  .bg-gradient-cool {
+    background-image: linear-gradient(
+      130deg,
+      #1832bf 0%,
+      #2348e0 52%,
+      #2f7fe4 100%
+    );
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .reveal,
   .rise {
@@ -136,7 +174,8 @@
   /* Magic UI: stop the marquee and shiny sweep — content stays put + legible. */
   .animate-marquee,
   .animate-marquee-vertical,
-  .animate-shiny-text {
+  .animate-shiny-text,
+  .text-gradient {
     animation: none !important;
   }
 }

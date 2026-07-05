@@ -33,7 +33,7 @@ export function About() {
 
           <Reveal delay={120} className="max-w-xl">
             <h2 className="font-display text-4xl font-semibold leading-[1.05] tracking-tight md:text-6xl">
-              Marketing with an <em className="italic text-accent">owner&rsquo;s</em>{" "}
+              Marketing with an <em className="italic text-gradient">owner&rsquo;s</em>{" "}
               eye.
             </h2>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-ink-soft">

@@ -22,7 +22,7 @@ export function ProjectCard({ project }: { project: Project }) {
           </p>
         </div>
         <div className="shrink-0 text-right">
-          <div className="font-display text-2xl font-semibold text-accent">
+          <div className="font-display text-2xl font-semibold text-gradient">
             {project.headlineMetric.value}
           </div>
           <div className="font-grotesk text-[0.66rem] uppercase tracking-[0.12em] text-stone">

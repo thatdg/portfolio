@@ -29,7 +29,7 @@ export function Hero() {
             className="rise block"
             style={{ "--rise-delay": "300ms" } as React.CSSProperties}
           >
-            <em className="italic text-accent">numbers.</em>
+            <em className="italic text-gradient">numbers.</em>
           </span>
         </h1>
 
