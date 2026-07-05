@@ -13,6 +13,6 @@ export const CONTACT = {
   cvUrl: "/tony-syme-cv.pdf",
   year: 2026,
   socials: [
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/anthony-syme-5043651a8/" },
+    { label: "LinkedIn", href: "https://www.linkedin.com/in/anthony-syme/" },
   ],
 } as const;

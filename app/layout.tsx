@@ -59,7 +59,10 @@ export default function RootLayout({
       lang="en"
       className={`${fraunces.variable} ${spaceGrotesk.variable} ${inter.variable} h-full`}
     >
-      <body className="min-h-full flex flex-col bg-paper text-ink">
+      <body
+        className="min-h-full flex flex-col bg-paper text-ink"
+        suppressHydrationWarning
+      >
         {/* Keep reveal content visible if JavaScript never loads. */}
         <noscript>
           <style>{`.reveal{opacity:1 !important;transform:none !important}`}</style>
