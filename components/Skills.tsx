@@ -1,5 +1,6 @@
 import { Container } from "./Container";
 import { Reveal } from "./Reveal";
+import { Marquee } from "./magicui/marquee";
 import { SKILLS, TOOLS, EDUCATION } from "@/content/cv";
 
 export function Skills() {
@@ -39,21 +40,26 @@ export function Skills() {
           ))}
         </div>
 
-        {/* tools */}
+        {/* tools — a slow marquee of the stack (Magic UI). */}
         <div className="mt-16 border-t border-sand pt-8">
           <p className="font-grotesk text-[0.72rem] uppercase tracking-[0.16em] text-stone">
             Tools &amp; platforms
           </p>
-          <ul className="mt-4 flex flex-wrap gap-2">
-            {TOOLS.map((tool) => (
-              <li
-                key={tool}
-                className="border border-sand px-3 py-1.5 font-grotesk text-[0.8rem] text-ink-soft"
-              >
-                {tool}
-              </li>
-            ))}
-          </ul>
+          <div className="relative mt-5">
+            <Marquee pauseOnHover className="[--duration:38s] [--gap:0.75rem]">
+              {TOOLS.map((tool) => (
+                <span
+                  key={tool}
+                  className="whitespace-nowrap border border-sand px-3 py-1.5 font-grotesk text-[0.8rem] text-ink-soft"
+                >
+                  {tool}
+                </span>
+              ))}
+            </Marquee>
+            {/* soft paper fades at the edges */}
+            <div className="pointer-events-none absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-paper to-transparent" />
+            <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-paper to-transparent" />
+          </div>
         </div>
 
         {/* education & certifications */}

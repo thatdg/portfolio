@@ -22,6 +22,43 @@
   --font-body: var(--font-inter);
 }
 
+/* Magic UI motion utilities (marquee + shiny sweep). Generate the
+ * `animate-marquee`, `animate-marquee-vertical`, and `animate-shiny-text`
+ * classes the Magic UI components reference. */
+@theme inline {
+  --animate-marquee: marquee var(--duration, 40s) linear infinite;
+  --animate-marquee-vertical: marquee-vertical var(--duration, 40s) linear infinite;
+  --animate-shiny-text: shiny-text 8s infinite;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - var(--gap, 1rem)));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - var(--gap, 1rem)));
+    }
+  }
+  @keyframes shiny-text {
+    0%,
+    90%,
+    100% {
+      background-position: calc(-100% - var(--shiny-width, 80px)) 0;
+    }
+    30%,
+    60% {
+      background-position: calc(100% + var(--shiny-width, 80px)) 0;
+    }
+  }
+}
+
 /* ------------------------------------------------------------------ *
  * Base
  * ------------------------------------------------------------------ */
@@ -93,6 +130,13 @@
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
+    animation: none !important;
+  }
+
+  /* Magic UI: stop the marquee and shiny sweep — content stays put + legible. */
+  .animate-marquee,
+  .animate-marquee-vertical,
+  .animate-shiny-text {
     animation: none !important;
   }
 }

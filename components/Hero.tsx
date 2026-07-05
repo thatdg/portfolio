@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { Container } from "./Container";
 import { CONTACT } from "@/content/site";
-import { PROOF } from "@/content/cv";
+import { ProofStats } from "./ProofStats";
+import { AnimatedShinyText } from "./magicui/animated-shiny-text";
 
 export function Hero() {
   return (
@@ -64,25 +65,15 @@ export function Hero() {
                 </span>
               </Link>
             </div>
-            <p className="font-grotesk text-[0.72rem] uppercase tracking-[0.16em] text-stone">
-              <span className="text-accent">&#9679;</span> {CONTACT.availability}
+            <p className="font-grotesk text-[0.72rem] uppercase tracking-[0.16em]">
+              <span className="text-accent">&#9679;</span>{" "}
+              <AnimatedShinyText>{CONTACT.availability}</AnimatedShinyText>
             </p>
           </div>
         </div>
 
-        {/* proof strip — real outcomes, kept to a single editorial line */}
-        <dl className="mt-14 grid grid-cols-2 gap-y-6 border-t border-sand pt-8 sm:grid-cols-4">
-          {PROOF.map((p) => (
-            <div key={p.label} className="flex flex-col">
-              <dt className="font-display text-3xl font-semibold text-accent md:text-4xl">
-                {p.value}
-              </dt>
-              <dd className="mt-1 font-grotesk text-[0.7rem] uppercase tracking-[0.14em] text-stone">
-                {p.label}
-              </dd>
-            </div>
-          ))}
-        </dl>
+        {/* proof strip — real outcomes; numbers count up on load (Magic UI). */}
+        <ProofStats />
       </Container>
     </section>
   );
