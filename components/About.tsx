@@ -17,7 +17,7 @@ export function About() {
             <figure>
               <div className="relative aspect-[4/5] w-full overflow-hidden">
                 <Image
-                  src="/tony.png"
+                  src="/tony.jpg"
                   alt={`${CONTACT.name}, ${CONTACT.role}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 40vw"
