@@ -1,4 +1,4 @@
-# LinkedIn rebuild — step-by-step (paste-ready)
+okay zz# LinkedIn rebuild — step-by-step (paste-ready)
 
 Work top to bottom. Everything below matches the CV and portfolio exactly — one
 consistent story: **B2B Marketing Manager, proven numbers, available now.**
@@ -7,14 +7,16 @@ consistent story: **B2B Marketing Manager, proven numbers, available now.**
 
 ## 1. Photo + banner (5 min)
 
-- **Profile photo:** upload `workAssets/linkedin-profile-pic.png` — background-removed
-  headshot on the cobalt brand blue, framed for LinkedIn's circle crop.
+- **Profile photo:** use the same headshot as the portfolio (`workAssets/1773880501648.png`
+  is the original). Crop close — head and shoulders, eyes about 1/3 from the top.
 - **Banner:** upload `workAssets/linkedin-banner.png` (made to LinkedIn's 1584×396;
   the design is weighted right so your photo doesn't cover it).
 
-## 2. Claim your custom URL — ✅ DONE
+## 2. Claim your custom URL (2 min)
 
-Claimed: **linkedin.com/in/anthony-syme** — the CV and site both point at it.
+Profile → **Edit public profile & URL** (top right) → change
+`anthony-syme-5043651a8` to `anthony-syme` / `tonysyme` / `tony-syme-marketing`
+(first one free). Then tell Claude the final URL so the CV can be regenerated to match.
 
 ## 3. Headline — your #1 search asset (2 min)
 
